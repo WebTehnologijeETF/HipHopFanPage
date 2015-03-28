@@ -1,0 +1,232 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
+ /*sve zajedno*/
+*{
+margin:0px;
+padding: 0px;
+}
+
+body {
+	background-color: #29242D;
+	
+	
+	}
+#page {
+	width:1000px;
+	margin-left: 150px;
+	
+	background-color: #E8E8E8;
+	}
+#header {
+	height: 200px;
+	}
+#header img{
+	margin: 15px;	
+	width: 160px;
+	height: 130px;
+	}
+#header p{
+	color: black;
+	margin-left: 18px;	
+	
+	font-family: Tangerine;
+	font-size: 25px;
+	text-shadow: 4px 4px 4px gray;	
+	}
+
+#menu {	
+	position: absolute;
+	top: 200px;
+	clear: both;
+	background-color: #1F2E2E;
+	width: 1000px;
+	height: 38px;
+	
+	}
+#menu ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	}
+#menu li {
+	display: inline;
+	
+	}
+#menu a {
+	text-decoration: none;
+	font-family: Tahoma, Geneva, sans-serif;
+	width: auto;
+	color: white;
+	float: left;
+	
+	padding: 0.3em 0.6em;
+	/*border-right: 4px solid white; */
+	}
+#menu a:hover {
+	background-color: DarkGray;
+	}
+
+/* home*/
+#homepage {
+	position: absolute;
+	top: 214px;
+	float: left;
+	}
+/*#vertical-line {
+	position: absolute;
+	left: 700px;
+	width: 1px;
+	height: 100px;
+	color: white;
+	float: left;
+	border: solid 2px;
+	}
+*/
+#news {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;	
+	}
+
+.full-title {
+	color: black;
+	}
+#headline {
+	background: #B2B2B2;
+	width: 640px;
+	height: 45px;
+	margin: 0px;
+	padding: 0px;
+	}
+#headline h2{
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	display: block;
+	width: 60px;
+	margin: 15px;
+	
+	}
+
+.post {
+	background-color: #B2B2B2;
+	width: 640px;
+	height: 350px;
+	margin-bottom: 4px;	
+	}
+.break{
+    width: 100%;
+    position: relative;
+    top: -16px;
+    clear: both;
+    margin: 20px 0;
+    border: 1px solid #001F1F;
+    box-shadow: 0 5px 5px #333;
+}
+
+.full-title a {
+	color: #0C0D0D;
+	text-decoration: none;
+	}
+.full-title a:hover {
+	color: #798282;
+	}
+.autor {
+	font-family: Ubuntu;
+	font-size: 11px;
+	color: #121C2E;
+	padding:8px;
+	float: left;
+	}
+.date {
+	color: #121C2E;
+	font-family: Ubuntu;
+	font-size: 11px;
+	padding: 8px;
+	}
+.entry-content {
+	clear: both;
+	margin: 12px;
+	}
+.entry-content p {
+	position: absolute;
+	left: auto;
+	float: left;
+	color: #0C0D0D;
+	width: 360px;
+	}
+.entry-content p a {
+	color:#1F2E2E;
+	text-decoration: none;
+	}
+.entry-content img {
+	position: relative;
+	top: 23px;
+	float: right;
+	width:230px;
+	height: 220px;
+	}
+
+.desno {
+	position: absolute;
+	top: 229px;
+	left: 795px;
+	float: right;
+	width: 355px;
+	height: auto;
+	background: #B2B2B2;
+	}
+.recommend {
+	height: auto;
+	}
+.recommend>h2 {
+	color: #37222C;
+	text-align: left;
+	padding: 8px;
+	}	
+.recommend>h4 {
+	color: #5C1F3D;
+	margin: 4px;
+	padding: 8px;
+	}
+.recommend>p {
+	padding: 8px;
+	margin: 4px;
+	}
+.recommend>img {
+	width: 200px;
+	height: 200px;
+	padding: 8px;
+	}
+.quotes {
+	height: 400px;
+	background: #CBB5E2;
+	}
+
+/*tables */
+#tablepage {
+	position: absolute;
+	top: 250px;
+	}
+
+#tabela { 
+	position: absolute;
+	top: 80px;
+	width: 400px;
+	margin: 0px;
+	border: dotted 2px;
+	border-color: black;
+
+	}
+table, th, td { 
+	border: solid red 1px; 
+	text-align: center;}
+
+
+
+
+#linkpage { 
+	position: absolute;
+	top: 258;
+	background-color: blue;
+	}
