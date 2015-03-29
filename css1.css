@@ -46,7 +46,7 @@ body {
 	width: 286px;
 	height: 110px;
 	position: absolute;
-	left: 380px;
+	left: 400px;
 	top: -50px;
 	}
 #menu {	
@@ -95,8 +95,8 @@ body {
 	height: 70px;
 	width: 1000px;
 	background-color: #F6FFF6;
-	position: absolute;
-	bottom: -1070px;
+	position: relative;
+	bottom: -1650px;
 	left: 148px;
 	border: solid 2px;
 	border-color: #0F1F2E;
@@ -518,8 +518,8 @@ th , td{
 	height: 70px;
 	width: 1000px;
 	background-color: #F6FFF6;
-	position: absolute;
-	bottom: -278px;
+	position: relative;
+	bottom: -850px;
 	left: 148px;
 	border: solid 2px;
 	border-color: #0F1F2E;
