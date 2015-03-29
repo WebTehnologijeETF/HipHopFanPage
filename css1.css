@@ -115,7 +115,7 @@ body {
 	}
 #footer-hp p {
 	position: absolute;
-	left: 476;
+	left: 476px;
 	bottom: 10px;
 	}
 
@@ -328,9 +328,7 @@ body {
 	
 }
 #table {
-  -moz-border-radius: 5px;
-  border-collapse: collapse;
-  border: none;
+  
 	width: 470px;
 }
 
