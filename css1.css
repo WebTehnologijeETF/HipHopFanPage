@@ -357,13 +357,7 @@ th , td{
 
   padding: 9px;
 }
-.tr1 , .tr3, .tr5 {
-	color: #0F1F2E;
-}
-.tr2 , .tr4, {
-	
-	color: #0F1F2E;
-}
+
 /*kolona 1*/
 
 #tr1td1, #tr2td1, #tr3td1, #tr4td1, #tr5td1 {
