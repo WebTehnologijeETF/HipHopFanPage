@@ -7,8 +7,9 @@ margin:0px;
 padding: 0px;
 }
 
-body {	
-	background: url("slike/3D.jpg");
+body {
+	
+	background: url("slike/gr2.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-color: #0F1F2E;
@@ -24,12 +25,12 @@ body {
 	*/
 #header {
 	position: absolute;
-	left: 150px;
+	left: 170px;
 	top: 0px;
 	background-color: #F6FFF6;
 	/*opacity: 0.7;*/
 	height: 180px;
-	width: 1000px;
+	width: 950px;
 	}
 .logo img{
 	margin: 4px;	
@@ -51,7 +52,7 @@ body {
 	width: 286px;
 	height: 110px;
 	position: absolute;
-	left: 400px;
+	left: 370px;
 	top: -50px;
 	}
 #menu {	
@@ -59,7 +60,7 @@ body {
 	top: 180px;
 	clear: both;
 	background-color: #0F1F2E;
-	width: 1000px;
+	width: 950px;
 	height: 28px;
 	
 	}
@@ -88,7 +89,7 @@ body {
 .menuList {
 	position: relative;
 	top: 208px;
-	width: 100px;
+	width: 90px;
 	z-index: 1;
 	display: none;
 }
@@ -97,6 +98,7 @@ body {
 	list-style-type:none;
 	background-color: #0F1F2E;
 	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 13px;
 }
 
 .subList li, #subList1 li, #subList2 li  {
@@ -123,20 +125,20 @@ body {
 #homepage {
 	display: block;
 	position: absolute;
-	left: 150px;
+	left: 170px;
 	top: 208px;
-	width: 1000px;
+	width: 950px;
 	min-height: 100%;
 	margin-bottom: -60px;
 	}
 
 #footer-hp {
 	height: 70px;
-	width: 1000px;
+	width: 950px;
 	background-color: #F6FFF6;
 	position: relative;
-	bottom: -1650px;
-	left: 148px;
+	bottom: -1670px;
+	left: 170px;
 	border: solid 2px;
 	border-color: #0F1F2E;
 	}
@@ -157,6 +159,16 @@ body {
 	bottom: 10px;
 	}
 
+/*
+	display: block;
+	position: absolute;
+	top: 194px;
+	float: left;
+	width: 1000px;
+	min-height: 98.9%;
+	margin-bottom: -60px;
+	
+	}*/
 #news {
 		
 	}
@@ -166,7 +178,7 @@ body {
 	}
 #headline {
 	background: #F6FFF6;
-	width: 640px;
+	width: 620px;
 	height: 58px;
 	margin: 0px;
 	padding: 0px;
@@ -189,7 +201,7 @@ body {
 .post {
 	background-color: #F6FFF6;
 	/*opacity: 0.7;*/
-	width: 640px;
+	width: 620px;
 	height: 350px;
 	border: solid 2px;
 	border-radius: 20px;
@@ -240,7 +252,7 @@ body {
 	left: auto;
 	float: left;
 	color: #0C0D0D;
-	width: 360px;
+	width: 355px;
 	}
 .entry-content p a {
 	color:#1F2E2E;
@@ -250,8 +262,8 @@ body {
 	position: relative;
 	top: 23px;
 	float: right;
-	max-width: 250px;
-	max-height: 240px;
+	max-width: 240px;
+	max-height: 230px;
 	border: solid 2px;
 	border-radius: 12px;
 	}
@@ -259,9 +271,9 @@ body {
 .desno {
 	position: absolute;
 	top: 0px;
-	left: 645px;
+	left: 622px;
 	float: right;
-	width: 355px;
+	width: 333px;
 	height: auto;
 	}
 .recommend {
@@ -344,9 +356,9 @@ body {
 #tablepage, #kontaktpage, #linkpage, #downloadpage {
 	display: block;
 	position: absolute;
-	left: 150px;
+	left: 170px;
 	top: 208px;
-	width: 1000px;
+	width: 950px;
 	min-height: 100%;
 	margin-bottom: -60px;
 	background: #F6FFF6;
@@ -359,7 +371,7 @@ body {
 #tabela { 
 	position: absolute;
 	top: 20px;
-	width: 400px;
+	width: 380px;
 	margin: 15px;
 	float: left;
 	border-color: black;
@@ -373,7 +385,7 @@ body {
 }
 #table {
   	margin-top: 20px;
-	min-width: 750px;
+	min-width: 700px;
 }
 
 table, th, td {
@@ -516,37 +528,41 @@ th , td{
 
 
 .textbox {
+	position: relative;
+	left: 50px;
 	margin-top: 50px;
-	margin-left: 50px;
 	font-family: Ubuntu;
 }
+
+
 #posalji, #ponisti {
 	width: 7em;
 	height: 2em;
 	margin-top: 10px;
+	position: relative;
 }
 
-#ime, #prezime, #email, #tel {
+#ime, #prezime, #email, #tel, {
 	width: 15em;
 }
+
+
 #imeslika, #prezimeslika, #emailslika, #telslika {
 	visibility: hidden;
-	float: right;
-	position: relative;
-	right: 720px;
-	margin-top: 2px;
+	position: absolute;
+	left: 190px;
+	
 }
 #porslika {
 	visibility: hidden;
 	position: absolute;
-	left: 428px;
-	bottom: 354px;
+	left: 430px;
 }
  
-#labIme, #labPrezime, #labEmail, #labEmail2, #labTel {
+#labIme, #labPrezime, #labEmail2, #labEmail, #labTel {
 	visibility: hidden;
 	position: absolute;
-	left: 290px;
+	left: 220px;
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
@@ -555,12 +571,12 @@ th , td{
  #labPor {
  	visibility: hidden;
  	position: absolute;
-	left: 450px;
-	bottom: 354px;
+	left: 452px;
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
 }
+
 
 
 
@@ -579,11 +595,11 @@ th , td{
 
 #footer {
 	height: 70px;
-	width: 1000px;
+	width: 950px;
 	background-color: #F6FFF6;
 	position: relative;
 	bottom: -850px;
-	left: 148px;
+	left: 168px;
 	border: solid 2px;
 	border-color: #0F1F2E;
 	}
