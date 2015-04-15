@@ -8,7 +8,12 @@ padding: 0px;
 }
 
 body {
+	
+	background: url("slike/3D.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-color: #0F1F2E;
+	background-repeat: initial;
 	}
 	/*
 #page {
@@ -23,6 +28,7 @@ body {
 	left: 150px;
 	top: 0px;
 	background-color: #F6FFF6;
+	/*opacity: 0.7;*/
 	height: 180px;
 	width: 1000px;
 	}
@@ -77,8 +83,42 @@ body {
 	/*border-right: 4px solid white; */
 	}
 #menu a:hover {
-	background-color: DarkGray;
+	background-color: #82B4B4;
 	}
+
+.menuList {
+	position: relative;
+	top: 208px;
+	width: 100px;
+	z-index: 1;
+	display: none;
+}
+
+.subList, #subList1, #subList2 {
+	list-style-type:none;
+	background-color: #0F1F2E;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.subList li, #subList1 li, #subList2 li  {
+	padding: 10px;
+	/*margin-top: 2px;*/
+}
+
+.subList li:hover, #subList1 li:hover, #subList2 li:hover {
+	background-color: #82B4B4;
+}
+
+.subList li a, #subList1 li a, #subList2 li a {
+	color: white;
+	text-decoration: none;
+}
+
+.subList li a:focus, a:visited {
+	outline: none;
+}
+
+
 
 /* home*/
 #homepage {
@@ -141,8 +181,8 @@ body {
 	height: 58px;
 	margin: 0px;
 	padding: 0px;
-	border: solid 2px;
-	border-radius: 22px;
+	border: solid 1px;
+	border-radius: 20px;
 	}
 #headline h2{
 	color: #0C0D0D;
@@ -159,10 +199,11 @@ body {
 
 .post {
 	background-color: #F6FFF6;
+	/*opacity: 0.7;*/
 	width: 640px;
 	height: 350px;
 	border: solid 2px;
-	border-radius: 22px;
+	border-radius: 20px;
 	border-color: #0F1F2E;
 	}
 /*.break{
@@ -237,7 +278,7 @@ body {
 .recommend {
 	height: 675px;
 	border: solid 2px;
-	border-radius: 22px;
+	border-radius: 20px;
 	border-color: #0F1F2E;
 	background: #F6FFF6;
 	}
@@ -279,7 +320,7 @@ body {
 .quotes {
 	height: 795px;
 	border: solid 2px;
-	border-radius: 22px;
+	border-radius: 20px;
 	border-color: #0F1F2E;
 	background: #F6FFF6;
 	}
@@ -490,13 +531,46 @@ th , td{
 	margin-left: 50px;
 	font-family: Ubuntu;
 }
-#posalji {
+#posalji, #ponisti {
 	width: 7em;
 	height: 2em;
 	margin-top: 10px;
 }
+
 #ime, #prezime, #email, #tel {
 	width: 15em;
+}
+#imeslika, #prezimeslika, #emailslika, #telslika {
+	visibility: hidden;
+	float: right;
+	position: relative;
+	right: 720px;
+	margin-top: 2px;
+}
+#porslika {
+	visibility: hidden;
+	position: absolute;
+	left: 428px;
+	bottom: 354px;
+}
+ 
+#labIme, #labPrezime, #labEmail, #labEmail2, #labTel {
+	visibility: hidden;
+	position: absolute;
+	left: 290px;
+	color: red;
+	font-size: 13px;
+	font-family: Tahoma;
+}
+
+ #labPor {
+ 	visibility: hidden;
+ 	position: absolute;
+	left: 450px;
+	bottom: 354px;
+	color: red;
+	font-size: 13px;
+	font-family: Tahoma;
 }
 
 

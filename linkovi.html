@@ -5,6 +5,7 @@
 	<title>Linkovi</title>
 	<link rel="stylesheet" type="text/css" href="css1.css">
 	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="js/skripta.js"></script>
 
 
 </head>
@@ -14,7 +15,7 @@
 
 	<header id="header">
 		<div class="logo">
-			<a href="wt1.html"><img src="slike/logo2c.png" alt="logo"></a>
+			<a href="index.html"><img src="slike/logo2c.png" alt="logo"></a>
 		</div>
 		<p>Hip Hop Sneak Attack</p>
 		<div class="grafit">
@@ -23,25 +24,43 @@
 
 		<div id="menu">
 			<ul>
-			<li><a href="wt1.html">Home</a></li>
-			<li><a href="tables.html">Tabele</a></li>
-			<li><a href="#">Download</a></li>
-			<li><a href="#">Grafiti</a></li>
-			<li><a href="#">Mixtapes</a></li>
-			<li><a href="linkovi.html">Linkovi</a></li>
-			<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a id="menu1" href="index.html">Home</a></li>
+				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
+				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
+				<li><a id="menu4" href="#">Grafiti</a></li>
+				<li><a id="menu5" href="#">Mixtapes</a></li>
+				<li><a id="menu6" href="linkovi.html">Linkovi</a></li>
+				<li><a id="menu7" href="kontakt.html">Kontakt</a></li>
 			</ul>
 		</div>
 	</header>
+	<div class="subMenus">
+	
+		<div class="menuList" id="subm2" onmouseenter="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">
+			<ul class="subList">
+				<li onclick="klik(this)"><a href="tables.html">Top Lista</a></li>
+				<li onclick="klik(this)"><a href="#">T2</a></li>
+			</ul>
+		</div>
+		
+		<div class="menuList" id="subm3" onmouseenter="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">
+			<ul class="subList">
+				<li onclick="klik(this)"><a href="#" class="subItem">Albums</a></li>
+				<li onclick="klik(this)"><a href="#" class="subItem">Mixtapes</a></li>
+				<li onclick="klik(this)"><a href="#" class="subItem">Songs</a></li>
+			</ul>
+		</div>	
+</div>
+
 	<div id="linkpage">
 		<ul class="lista">
-			<li> <a href="http://www.hotnewhiphop.com">Hot New Hip Hop</a> </li>
-			<li> <a href="http://rap.genius.com">Rap Genius</a> </li>
-			<li> <a href="#http://www.passionweiss.com">Passion of the Weiss</a> </li>
-			<li> <a href="http://www.dopehood.se/">Dopehood</a></li>
-			<li><a href="http://www.fmjam.com/">FMJAM</a></li>
-			<li><a href="http://www.hiphop-network.com/index.asp">Hip Hop Network</a></li>
-			<li><a href="http://www.graffiti.org/">Art Crime</a></li>
+			<li> <a href="http://www.hotnewhiphop.com" target="blank">Hot New Hip Hop</a> </li>
+			<li> <a href="http://rap.genius.com" target="blank">Rap Genius</a> </li>
+			<li> <a href="#http://www.passionweiss.com" target="blank">Passion of the Weiss</a> </li>
+			<li> <a href="http://www.dopehood.se/" target="blank">Dopehood</a></li>
+			<li><a href="http://www.fmjam.com/" target="blank">FMJAM</a></li>
+			<li><a href="http://www.hiphop-network.com/index.asp" target="blank">Hip Hop Network</a></li>
+			<li><a href="http://www.graffiti.org/" target="blank">Art Crime</a></li>
 		</ul>
 	</div>
 	<div class="break-footer"></div>

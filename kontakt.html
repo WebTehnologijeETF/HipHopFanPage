@@ -1,19 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
 	<title>Kontakt</title>
 	<link rel="stylesheet" type="text/css" href="css1.css">
 	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-
+	
 </head>
 
 <body>
 <div id="page">
 	<header id="header">
 		<div class="logo">
-			<a href="wt1.html"><img src="slike/logo2c.png" alt="logo"></a>
+			<a href="index.html"><img src="slike/logo2c.png" alt="logo"></a>
 		</div>
 		<p>Hip Hop Sneak Attack</p>
 		<div class="grafit">
@@ -22,31 +21,69 @@
 
 		<div id="menu">
 			<ul>
-			<li><a href="wt1.html">Home</a></li>
-			<li><a href="tables.html">Tabele</a></li>
-			<li><a href="#">Download</a></li>
-			<li><a href="#">Grafiti</a></li>
-			<li><a href="#">Mixtapes</a></li>
-			<li><a href="linkovi.html">Linkovi</a></li>
-			<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a id="menu1" href="index.html">Home</a></li>
+				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
+				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
+				<li><a id="menu4" href="#">Grafiti</a></li>
+				<li><a id="menu5" href="#">Mixtapes</a></li>
+				<li><a id="menu6" href="linkovi.html">Linkovi</a></li>
+				<li><a id="menu7" href="kontakt.html">Kontakt</a></li>
 			</ul>
 		</div>
 	</header>
+	<div class="subMenus">
+	
+		<div class="menuList" id="subm2" onmouseenter="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">
+			<ul class="subList">
+				<li onclick="klik(this)"><a href="tables.html">Top Lista</a></li>
+				<li onclick="klik(this)"><a href="#">T2</a></li>
+			</ul>
+		</div>
+		
+		<div class="menuList" id="subm3" onmouseenter="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">
+			<ul class="subList">
+				<li onclick="klik(this)"><a href="#">Albums</a></li>
+				<li onclick="klik(this)"><a href="#">Mixtapes</a></li>
+				<li onclick="klik(this)"><a href="#">Songs</a></li>
+			</ul>
+		</div>	
+</div>
+
 
 	<div id="kontaktpage">
 		<div class="textbox">
-			<form action="demo.asp" method="get" target="blank" accept-charset="UTF-8" >					
-				Ime:  <br>
-				<input id="ime" required="required" type="text" name="ime"> <br><br>
-				Prezime: <br>
-				<input id="prezime" required="required" type="text" name="prezime"> <br><br>
-				Email: <br>
-				<input id="email" type="email" name="email"><br><br>
+			<form name="forma" id="forma" action="#" method="get">					
+				Ime*:  <br>
+				<input id="ime" required="required" type="text" name="ime" onblur="valIme()"> 
+					<img id="imeslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<label id="labIme">Upišite ime!</label><br><br>
+				
+
+				Prezime*: <br>
+				<input id="prezime" required="required" type="text" name="prezime" onblur="valPrezime()">
+					<img id="prezimeslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<label id="labPrezime">Upišite prezime!</label><br><br>
+				
+				
+				Email*: <br>
+				<input id="email" required="required" type="email" name="email" onblur="valMail()">
+					<img id="emailslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<label id="labEmail">Email nije validan!</label>
+					<label id="labEmail2">Upišite email!</label><br><br>
+				
+
 				Tel: <br>
-				<input id="tel" type="tel" name="tel"><br><br>
-				Poruka: <br>
-				<textarea required="required" name="poruka" rows="10" cols="50"></textarea> <br>
-				<input type="submit" id="posalji" value="Pošalji">
+				<input id="tel" type="tel" name="tel" onblur="valTel()">
+					<img id="telslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<label id="labTel">Telefon nije validan!</label><br><br>
+				
+				Poruka*: <br>
+				<textarea id="por" required="required" name="poruka" rows="10" cols="50" onblur="valPor()"></textarea> 
+					<img id="porslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<label id="labPor">Sadržaj poruke ne može biti prazan!</label><br>
+				
+				<input id="posalji" type="submit" value="Submit">
+				<!--<input id="ponisti" type="reset" value="Reset")"> -->
 			</form>
 		</div>
 
@@ -64,5 +101,8 @@
 	</footer> 
 		
 </div>
+	<script src="js/kontakt.js"></script>
+	<script src="js/skripta.js"></script>
+
 </body>
 </html>
