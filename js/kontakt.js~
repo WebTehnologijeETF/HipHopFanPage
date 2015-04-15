@@ -99,4 +99,13 @@ function valPor () {
 	else document.getElementById("porslika").style.visibility="hidden";
 }
 
-
+/*function reset () 
+{
+	
+		document.getElementById("imeslika").style.visibility="hidden";
+		document.getElementById("prezimeslika").style.visibility="hidden";
+		document.getElementById("emailslika").style.visibility="hidden";
+		document.getElementById("telslika").style.visibility="hidden";
+		document.getElementById("porslika").style.visibility="hidden";
+	
+}*/

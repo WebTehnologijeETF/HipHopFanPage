@@ -16,5 +16,6 @@ function subNestani(idMeni){
 
 	hidemenu.style.left = "0px";
 	hidemenu.style.display = "none";
+
 }
 

@@ -7,7 +7,8 @@ margin:0px;
 padding: 0px;
 }
 
-body {	
+body {
+	
 	background: url("slike/3D.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -157,6 +158,16 @@ body {
 	bottom: 10px;
 	}
 
+/*
+	display: block;
+	position: absolute;
+	top: 194px;
+	float: left;
+	width: 1000px;
+	min-height: 98.9%;
+	margin-bottom: -60px;
+	
+	}*/
 #news {
 		
 	}
