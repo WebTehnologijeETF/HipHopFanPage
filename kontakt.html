@@ -6,14 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="css1.css">
 	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="icon" type="image/png" href="slike/logo2cc.png">
-	
 </head>
 
 <body>
 <div id="page">
 	<header id="header">
 		<div class="logo">
-			<a href="index.html"><img src="slike/logo2c.png" alt="logo"></a>
+			<a onclick="openUrl('index.html')"><img src="slike/logo2c.png" alt="logo"></a>
 		</div>
 		<p>Hip Hop Sneak Attack</p>
 		<div class="grafit">
@@ -22,13 +21,13 @@
 
 		<div id="menu">
 			<ul>
-				<li><a id="menu1" href="index.html">Home</a></li>
+				<li><a id="menu1" onclick="openUrl('index.html')">Home</a></li>
 				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
 				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
-				<li><a id="menu4" href="#">Grafiti</a></li>
-				<li><a id="menu5" href="#">Mixtapes</a></li>
-				<li><a id="menu6" href="linkovi.html">Linkovi</a></li>
-				<li><a id="menu7" href="kontakt.html">Kontakt</a></li>
+				<li><a id="menu4" onclick="openUrl('grafiti.html')">Grafiti</a></li>
+				<li><a id="menu5" onclick="openUrl('#')">Mixtapes</a></li>
+				<li><a id="menu6" onclick="openUrl('linkovi.html')">Linkovi</a></li>
+				<li><a id="menu7" onclick="openUrl('kontakt.html')">Kontakt</a></li>
 			</ul>
 		</div>
 	</header>
@@ -36,16 +35,16 @@
 	
 		<div class="menuList" id="subm2" onmouseenter="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">
 			<ul class="subList">
-				<li onclick="klik(this)"><a href="tables.html">Top Lista</a></li>
-				<li onclick="klik(this)"><a href="#">T2</a></li>
+				<li onclick="openUrl('tables.html')"><a>Top Lista</a></li>
+				<li onclick="openUrl('#')"><a>T2</a></li>
 			</ul>
 		</div>
 		
 		<div class="menuList" id="subm3" onmouseenter="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">
 			<ul class="subList">
-				<li onclick="klik(this)"><a href="#">Albums</a></li>
-				<li onclick="klik(this)"><a href="#">Mixtapes</a></li>
-				<li onclick="klik(this)"><a href="#">Songs</a></li>
+				<li onclick="openUrl('#')"><a>Albums</a></li>
+				<li onclick="openUrl('#')"><a>Mixtapes</a></li>
+				<li onclick="openUrl('#')"><a>Songs</a></li>
 			</ul>
 		</div>	
 </div>
@@ -103,6 +102,7 @@
 </div>
 	<script src="js/kontakt.js"></script>
 	<script src="js/skripta.js"></script>
+	<script src="js/ajax.js"></script>
 
 </body>
 </html>

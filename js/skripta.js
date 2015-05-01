@@ -1,7 +1,7 @@
-function klik(clicked){
+//function klik(clicked){
 	//alert("pozvalose");
-	clicked.childNodes[0].click();
-}
+//	clicked.childNodes[0].click();
+//}
 
 function subKreiraj(idClicked, idMeni){
 	var showmenu = document.getElementById(idMeni);
