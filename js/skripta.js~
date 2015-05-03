@@ -1,7 +1,7 @@
-//function klik(clicked){
+function klik(clicked){
 	//alert("pozvalose");
-//	clicked.childNodes[0].click();
-//}
+	clicked.childNodes[0].click();
+}
 
 function subKreiraj(idClicked, idMeni){
 	var showmenu = document.getElementById(idMeni);
@@ -16,5 +16,6 @@ function subNestani(idMeni){
 
 	hidemenu.style.left = "0px";
 	hidemenu.style.display = "none";
+
 }
 

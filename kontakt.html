@@ -25,7 +25,7 @@
 				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
 				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
 				<li><a id="menu4" onclick="openUrl('grafiti.html')">Grafiti</a></li>
-				<li><a id="menu5" onclick="openUrl('#')">Mixtapes</a></li>
+				<li><a id="menu5" onclick="openUrl('mixtapes.html')">Mixtapes</a></li>
 				<li><a id="menu6" onclick="openUrl('linkovi.html')">Linkovi</a></li>
 				<li><a id="menu7" onclick="openUrl('kontakt.html')">Kontakt</a></li>
 			</ul>
@@ -50,23 +50,27 @@
 </div>
 
 	<div id="kontaktpage">
+		<p>Hit us with your thoughts!</p>
 		<div class="textbox">
 			<form name="forma" id="forma" action="#" method="get">					
-				   Ime*:  <br>
+				   Ime: * <br>
 				<input id="ime" required="required" type="text" name="ime" onblur="valIme()"> 
 					<img id="imeslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<img id="imeslika2" src="slike/valid.png" alt="valid">					
 					<label id="labIme">Upišite ime!</label><br><br>
 				
 
-				Prezime*: <br>
+				Prezime: * <br>
 				<input id="prezime" required="required" type="text" name="prezime" onblur="valPrezime()">
 					<img id="prezimeslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<img id="prezimeslika2" src="slike/valid.png" alt="error">
 					<label id="labPrezime">Upišite prezime!</label><br><br>
 				
 				
-				Email*: <br>
+				Email: * <br>
 				<input id="email" required="required" type="email" name="email" onblur="valMail()">
 					<img id="emailslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<img id="emailslika2" src="slike/valid.png" alt="error">	
 					<label id="labEmail">Email nije validan!</label>
 					<label id="labEmail2">Upišite email!</label><br><br>
 				
@@ -74,14 +78,26 @@
 				Tel: <br>
 				<input id="tel" type="tel" name="tel" onblur="valTel()">
 					<img id="telslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<img id="telslika2" src="slike/valid.png" alt="error">	
 					<label id="labTel">Telefon nije validan!</label><br><br>
 				
-				Poruka*: <br>
+				Grad: <br>
+				<input id="grad" type="text" name="grad">
+					<br><br>
+
+				Postanski broj: <br>
+				<input id="pbroj" type="text" name="pbroj"> 
+					<img id="pbrojslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
+					<img id="pbrojslika2" src="slike/valid.png" alt="error">	
+					<label id="labPBroj">Poštanski broj nije validan!</label><br><br>
+
+				Poruka: * <br>
 				<textarea id="por" required="required" name="poruka" rows="10" cols="50" onblur="valPor()"></textarea> 
 					<img id="porslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
-					<label id="labPor">Sadržaj poruke ne može biti prazan!</label><br>
+					<img id="porslika2" src="slike/valid.png" alt="error">	
+					<label id="labPor">Sadržaj poruke ne može biti prazan!</label>
 				
-				<input id="posalji" type="submit" value="Submit">
+				<input id="posalji" type="submit" value="Submit" onclick="validirajMjesto()">
 				<!--<input id="ponisti" type="reset" value="Reset")"> -->
 			</form>
 		</div>

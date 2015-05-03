@@ -532,7 +532,7 @@ th , td{
 .textbox {
 	position: relative;
 	left: 50px;
-	margin-top: 50px;
+	margin-top: 30px;
 	font-family: Ubuntu;
 }
 
@@ -555,34 +555,54 @@ th , td{
 	top: -28px;
 }
 
+#kontaktpage p {
+	margin-top: 22px;
+	margin-left: 39px;
+	font-size: 40px;
+	font-style: bold;
+	font-family: Tangerine, Tahoma;
+	color: black;
+}
+
 #posalji, #ponisti {
 	width: 7em;
 	height: 2em;
-	margin-top: 10px;
-	position: relative;
+	margin-top: 124px;
+	position: absolute;
+	left: 430px;
+	float: right;
 }
 
-#ime, #prezime, #email, #tel, {
+#ime, #prezime, #email, #tel, #mjesto, #grad, #pbroj{
 	width: 15em;
 }
 
 
-#imeslika, #prezimeslika, #emailslika, #telslika {
+#imeslika, #prezimeslika, #emailslika, #telslika, #gradslika, #pbrojslika {
 	visibility: hidden;
 	position: absolute;
-	left: 190px;
-	
+	left: 210px;	
 }
-#porslika {
+#imeslika2, #prezimeslika2, #emailslika2, #telslika2, #gradslika2, #pbrojslika2 {
+	visibility: hidden;
+	position: absolute;
+	left: 210px;
+	height: 16px;
+	width: 16px;	
+}
+
+#porslika, #porslika2 {
 	visibility: hidden;
 	position: absolute;
 	left: 430px;
+	height: 16px;
+	width: 16px;
 }
  
-#labIme, #labPrezime, #labEmail2, #labEmail, #labTel {
+#labIme, #labPrezime, #labEmail2, #labEmail, #labTel, #labGrad, #labPBroj {
 	visibility: hidden;
 	position: absolute;
-	left: 220px;
+	left: 230px;
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
@@ -595,6 +615,7 @@ th , td{
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
+	float: left;
 }
 
 
