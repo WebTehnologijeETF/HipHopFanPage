@@ -83,13 +83,16 @@
 				
 				Grad: <br>
 				<input id="grad" type="text" name="grad">
+					<img id="gradslika" src="slike/error.png" alt="error" >
+					<img id="gradslika2" src="slike/valid.png" alt="error">	
 					<br><br>
 
 				Postanski broj: <br>
-				<input id="pbroj" type="text" name="pbroj" onblur="webServis()"> 
+				<input id="pbroj" type="text" name="pbroj" onblur="valPBroj(this)"> 
 					<img id="pbrojslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
 					<img id="pbrojslika2" src="slike/valid.png" alt="error">	
 					<label id="labPBroj">Poštanski broj nije validan!</label><br><br>
+					<label id="labPBroj2">Unesite grad!</label>
 
 				Poruka: * <br>
 				<textarea id="por" required="required" name="poruka" rows="10" cols="50" onblur="valPor()"></textarea> 
@@ -97,7 +100,7 @@
 					<img id="porslika2" src="slike/valid.png" alt="error">	
 					<label id="labPor">Sadržaj poruke ne može biti prazan!</label>
 				
-				<input id="posalji" type="submit" value="Submit" onclick="validirajMjesto()">
+				<input id="posalji" type="submit" value="Submit" onclick="validiraj()">
 				<!--<input id="ponisti" type="reset" value="Reset")"> -->
 			</form>
 		</div>

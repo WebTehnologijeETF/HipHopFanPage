@@ -1,7 +1,10 @@
-function validiraj(arg)
-{
-	var forma = document.getElementById("forma");
-}
+var val_ime=false;
+var val_prez=false;
+var val_mail=false;
+var val_tel=false;
+var val_por=false;
+var val_pbr=false;
+var val_web=false;
 
 function prikaziError(txt)
 {
@@ -27,7 +30,12 @@ function prikaziError(txt)
 		document.getElementById("labPor").style.visibility="visible";
 	}
 	if(txt.id==="pbrojslika"){
-		document.getElementById("labPBroj").style.visibility="visible";
+		var gr=document.getElementById("grad");
+		var pb=document.getElementById("pbroj");
+		if(gr.value=="" & pb.value!="")
+			document.getElementById("labPBroj2").style.visibility="visible";
+		else
+			document.getElementById("labPBroj").style.visibility="visible";
 	}
 }
 
@@ -42,114 +50,149 @@ function sakrijError(txt)
 		document.getElementById("labTel").style.visibility="hidden";
 		document.getElementById("labPor").style.visibility="hidden";
 		document.getElementById("labPBroj").style.visibility="hidden";
+		document.getElementById("labPBroj2").style.visibility="hidden";
 	}
 }
 	
-function valIme()
-{
+function valIme(){
 	var ime=document.getElementById("ime").value;
 	var imeReg = /^[a-zšđčćž]+$/i;
 
 	//if(ime == "")
 	//document.getElementById("imeslika").style.visibility="visible";
 
-	if (!imeReg.test(forma.ime.value) || ime.length<2 )
+	if (!imeReg.test(forma.ime.value) || ime.length<2 ){
 		document.getElementById("imeslika").style.visibility = "visible";
+		document.getElementById("imeslika2").style.visibility="hidden";
+		val_ime=false;
+	}
 		
 	else{
 		document.getElementById("imeslika").style.visibility = "hidden";
 		document.getElementById("imeslika2").style.visibility="visible";
+		val_ime=true;
 	}
 }
 
-function valPrezime () 
-{
+function valPrezime (){
 	var prezime=document.getElementById("prezime").value;
 
-	if(prezime == "")
+	if(prezime == ""){
 		document.getElementById("prezimeslika").style.visibility="visible";
+		document.getElementById("prezimeslika2").style.visibility="hidden";
+		val_prez=false;
+	}
 		
 	else{
 		document.getElementById("prezimeslika").style.visibility="hidden";
 		document.getElementById("prezimeslika2").style.visibility="visible";
+		val_prez=true;
 	}
 }
 
-function valMail() 
-{
+function valMail(){
 	var emailReg = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i;
 
-	if (!emailReg.test(forma.email.value))
+	if (!emailReg.test(forma.email.value)){
 		document.getElementById("emailslika").style.visibility = "visible";
+		document.getElementById("emailslika2").style.visibility="hidden";
+		val_mail=false;
+	}
 		
 	else{
 		document.getElementById("emailslika").style.visibility = "hidden";
 		document.getElementById("emailslika2").style.visibility="visible";
+		val_mail=true;
 	}
 }
 
-function valTel () 
-{
+function valTel (){
 	var tel=document.getElementById("tel");
 	var telReg = /^\+{0,1}[0-9]+[\/-]{0,1}[0-9-]+$/;
 
-	if (!telReg.test(forma.tel.value))
-			document.getElementById("telslika").style.visibility = "visible";
+	if (!telReg.test(forma.tel.value)){
+		document.getElementById("telslika").style.visibility = "visible";
+		document.getElementById("telslika2").style.visibility="hidden";
+		val_tel=false;
+	}
 
-	if((telReg.test(forma.tel.value)))
-			document.getElementById("telslika2").style.visibility="visible";
+	if((telReg.test(forma.tel.value))){
+		document.getElementById("telslika2").style.visibility="visible";
+		document.getElementById("telslika").style.visibility="hidden";
+		val_tel=true;
+	}
 
-	if(tel.value=="")
+	if(tel.value==""){
 		document.getElementById("telslika").style.visibility = "hidden";
+		document.getElementById("telslika2").style.visibility="hidden";
+		val_tel=true;
+	}
 	
 }
-
 function valPor () {
 	var por=document.getElementById("por");
-	if(por.value=="")
+	if(por.value==""){
 		document.getElementById("porslika").style.visibility="visible";
+		document.getElementById("porslika2").style.visibility="hidden";
+		val_por=false;
+	}
 	
 	else{ 
 		document.getElementById("porslika").style.visibility="hidden";
 		document.getElementById("porslika2").style.visibility="visible";
+		val_por=true;
+	}
+}
+function valPBroj (pbroj) {
+	var grad=document.getElementById("grad").value;
+	document.getElementById("pbrojslika").style.visibility="hidden";
+	document.getElementById("pbrojslika2").style.visibility="hidden";
+		   		
+	if(pbroj.value!="" & grad!=""){
+		val_pbr=true;
+		webServis();
+	}
+	else if(pbroj.value!="" & grad===""){
+		document.getElementById("pbrojslika2").style.visibility="hidden";
+       	document.getElementById("pbrojslika").style.visibility="visible";
+       	val_pbr=false;
+	}
+	else{
+		val_pbr=true;
+		val_web=true;
 	}
 }
 
-function webServis () {
-	alert("pozvan webServis");
-	var pbroj=document.getElementById("pbroj");
-	var grad=document.getElementById("grad");
-    
-    var ajax=new XMLHttpRequest();
-
-    ajax.onreadystatechange= function(){
-    	alert("onreadystatechange");
-
-         if (ajax.readyState === 4 && ajax.status === 200){
+function webServis() {
+	var pbroj=document.getElementById("pbroj").value;
+	var grad=document.getElementById("grad").value;
+	ajax=new XMLHttpRequest();
+	ajax.onreadystatechange=function(){
+		if(ajax.readyState === 4 && ajax.status === 200) {
 
 			var pars = JSON.parse(ajax.responseText);
-			alert("json");
-            
-			if(Object.keys(pars)[0]=="greska"){
-		       	document.getElementById("pbroj");
-		       	alert("greska");
+			if(Object.keys(pars)[0]=="greska") {
+		      	document.getElementById("pbrojslika2").style.visibility="hidden";
 		       	document.getElementById("pbrojslika").style.visibility="visible";
-		       	alert("pbrojslika visible");
-		       	//document.getElementById("labPBroj").style.visibility="visible";
-            }
-
-		   else if(Object.keys(pars)[0]=="ok"){
-		    	alert("OK");
-		   		document.getElementById("pbroj");
-		   		document.getElementById("pbrojslika2").style.visibility="visible";
+		       	val_web=false;
 		    }
+			else if(Object.keys(pars)[0]=="ok") {
+		   		document.getElementById("pbrojslika").style.visibility="hidden";
+		   		document.getElementById("pbrojslika2").style.visibility="visible";
+		   		val_web=true;
+		   }
 		}
-        
-        if (ajax.readyState === 4 && ajax.status === 404)
-        	alert("Greska!");  
- 	}
- 	ajax.open("GET","http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto="+grad+ "&postanskiBroj=" + pbroj, true);
-    alert("alert open");
-    ajax.send();
-    alert("alert send");
+		else if (ajax.readyState === 4 && ajax.status === 404)
+        alert("Greska!"); 	
+	}
+	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto=" + grad + "&postanskiBroj=" + pbroj, true);
+	ajax.send();
+}
+
+function validiraj(){
+	var forma = document.getElementById("forma");
+	if((val_ime) & (val_prez) & (val_mail) & (val_tel) & (val_por) & (val_pbr) & (val_web) )
+		forma.submit();
+	else
+		alert("Unesite validne vrijednosti!");
 }

@@ -607,6 +607,15 @@ th , td{
 	font-size: 13px;
 	font-family: Tahoma;
 }
+#labPBroj2 {
+	visibility: hidden;
+	position: absolute;
+	left: 230px;
+	color: red;
+	font-size: 13px;
+	font-family: Tahoma;
+	margin-top: -38px;
+}
 
  #labPor {
  	visibility: hidden;
