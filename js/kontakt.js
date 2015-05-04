@@ -5,6 +5,14 @@ var val_tel=false;
 var val_por=false;
 var val_pbr=false;
 var val_web=false;
+var button=document.getElementById("posalji");
+button.disabled=true;
+
+function provjeri (){
+	if(val_ime==true && (val_prez) && (val_mail) && (val_tel) && (val_por) && (val_pbr) && (val_web)){
+		button.disabled=false;
+	}
+}
 
 function prikaziError(txt)
 {
@@ -72,6 +80,7 @@ function valIme(){
 		document.getElementById("imeslika2").style.visibility="visible";
 		val_ime=true;
 	}
+	provjeri();
 }
 
 function valPrezime (){
@@ -88,6 +97,7 @@ function valPrezime (){
 		document.getElementById("prezimeslika2").style.visibility="visible";
 		val_prez=true;
 	}
+	provjeri();
 }
 
 function valMail(){
@@ -104,6 +114,7 @@ function valMail(){
 		document.getElementById("emailslika2").style.visibility="visible";
 		val_mail=true;
 	}
+	provjeri();
 }
 
 function valTel (){
@@ -127,7 +138,7 @@ function valTel (){
 		document.getElementById("telslika2").style.visibility="hidden";
 		val_tel=true;
 	}
-	
+	provjeri();
 }
 function valPor () {
 	var por=document.getElementById("por");
@@ -142,8 +153,10 @@ function valPor () {
 		document.getElementById("porslika2").style.visibility="visible";
 		val_por=true;
 	}
+	provjeri();
 }
-function valPBroj (pbroj) {
+function valPBroj () {
+	var pbroj=document.getElementById("pbroj");
 	var grad=document.getElementById("grad").value;
 	document.getElementById("pbrojslika").style.visibility="hidden";
 	document.getElementById("pbrojslika2").style.visibility="hidden";
@@ -161,6 +174,7 @@ function valPBroj (pbroj) {
 		val_pbr=true;
 		val_web=true;
 	}
+	provjeri();
 }
 
 function webServis() {
@@ -191,8 +205,13 @@ function webServis() {
 
 function validiraj(){
 	var forma = document.getElementById("forma");
-	if((val_ime) & (val_prez) & (val_mail) & (val_tel) & (val_por) & (val_pbr) & (val_web) )
+
+	if((val_ime) & (val_prez) & (val_mail) & (val_tel) & (val_por) & (val_pbr) & (val_web) ){
+		button.disabled=false;
 		forma.submit();
-	else
-		alert("Unesite validne vrijednosti!");
+	}
+	else{
+		button.disabled=true
+		alert("Unesite validne vrijednosti!");		
+	}
 }
