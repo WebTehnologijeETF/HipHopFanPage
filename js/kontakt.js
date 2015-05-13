@@ -6,7 +6,7 @@ var val_por=false;
 var val_pbr=false;
 var val_web=false;
 var button=document.getElementById("posalji");
-button.disabled=true;
+//button.disabled=true;
 
 function provjeri (){
 	if(val_ime==true && (val_prez) && (val_mail) && (val_tel) && (val_por) && (val_pbr) && (val_web)){
@@ -208,7 +208,7 @@ function validiraj(){
 
 	if((val_ime) & (val_prez) & (val_mail) & (val_tel) & (val_por) & (val_pbr) & (val_web) ){
 		button.disabled=false;
-		forma.submit();
+		//forma.submit();
 	}
 	else{
 		button.disabled=true

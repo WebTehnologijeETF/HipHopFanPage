@@ -13,7 +13,7 @@
 
 	<header id="header">
 		<div class="logo">
-			<a onclick="openUrl('index.html')"><img src="slike/logo2c.png" alt="logo"></a>
+			<a onclick="openUrl('index.php')"><img src="slike/logo2c.png" alt="logo"></a>
 		</div>
 		<p>Hip Hop Sneak Attack</p>
 		<div class="grafit">
@@ -22,7 +22,7 @@
 
 		<div id="menu">
 			<ul>
-				<li><a id="menu1" onclick="openUrl('index.html')">Home</a></li>
+				<li><a id="menu1" onclick="openUrl('index.php')">Home</a></li>
 				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
 				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
 				<li><a id="menu4" onclick="openUrl('grafiti.html')">Grafiti</a></li>
@@ -51,7 +51,31 @@
 	</div>
 
 	<div id="mixtapepage">
-		
+		 <p>Ostavite link svog mixtape-a! (ne mijenjajte ID)</p><br><br>
+		 <form id="forma-unos">
+		 	<div id="fu1">
+				 <label>ID:</label><br>
+				 <input id="ID" type="text"> <br><br>
+			</div>
+			<div id="fu2">
+				 <label>Naziv mixtape-a:</label><br>
+				 <input id="naziv" type="text" required="required"><br><br>
+			 </div>
+			 <div id="fu3">
+				 <label>URL za download/slušanje:</label><br>
+				 <input id="url" type="text" required="required"><br><br>
+			</div>
+			<div id="fu4">
+				 <label>Slika (url):</label><br>
+				 <input id="slika" type="text" required="required"><br><br>
+			</div>
+			<div id="buttons">
+				 <input id="promijeni" type="button" value="Promijeni" onclick="webServis()">
+				 <input id="obrisi" type="button" value="Obriši" onclick="dodajMixtape()">
+				 <input	id="dodaj" type="button" value="Dodaj" onclick="dodajMixtape()">
+				 <br><br><br>
+			</div>
+		</form>
 	</div>
 	<div class="break-footer"></div>
 		<footer id="footer">
@@ -67,5 +91,8 @@
 </div>
 		<script src="js/skripta.js"></script>
 		<script src="js/ajax.js"></script>
+		<script src="js/test.js"></script>
+		<script src="js/kontakt.js"></script>
+		<script src="js/proizvodi.js"></script>
 </body>
 </html>

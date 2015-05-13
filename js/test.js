@@ -1,0 +1,3 @@
+function dodajT() () {
+	alert("jebemtimater");
+}

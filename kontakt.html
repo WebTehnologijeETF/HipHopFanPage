@@ -12,7 +12,7 @@
 <div id="page">
 	<header id="header">
 		<div class="logo">
-			<a onclick="openUrl('index.html')"><img src="slike/logo2c.png" alt="logo"></a>
+			<a onclick="openUrl('index.php')"><img src="slike/logo2c.png" alt="logo"></a>
 		</div>
 		<p>Hip Hop Sneak Attack</p>
 		<div class="grafit">
@@ -21,7 +21,7 @@
 
 		<div id="menu">
 			<ul>
-				<li><a id="menu1" onclick="openUrl('index.html')">Home</a></li>
+				<li><a id="menu1" onclick="openUrl('index.php')">Home</a></li>
 				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
 				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
 				<li><a id="menu4" onclick="openUrl('grafiti.html')">Grafiti</a></li>
@@ -50,9 +50,9 @@
 </div>
 
 	<div id="kontaktpage">
-		<p>Hit us with your thoughts!</p>
+		<p id="kontaktnaslov">Hit us with your thoughts!</p>
 		<div class="textbox">
-			<form name="forma" id="forma" action="#" method="get">					
+			<form name="forma" id="forma" action="kontakt.php" method="post">					
 				   Ime: * <br>
 				<input id="ime" required="required" type="text" name="ime" onblur="valIme()"> 
 					<img id="imeslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
@@ -79,7 +79,7 @@
 				<input id="tel" type="tel" name="tel" onblur="valTel()">
 					<img id="telslika" src="slike/error.png" alt="error" onmouseenter="prikaziError(this)" onmouseleave="sakrijError(this)">
 					<img id="telslika2" src="slike/valid.png" alt="error">	
-					<label id="labTel">Telefon nije validan!</label><br><br>
+					<label id="labTel">Format nije validan!</label><br><br>
 				
 				Grad: <br>
 				<input id="grad" type="text" name="grad" onblur="valPBroj()">
@@ -100,8 +100,9 @@
 					<img id="porslika2" src="slike/valid.png" alt="error">	
 					<label id="labPor">Sadržaj poruke ne može biti prazan!</label>
 				<!--<button id="posalji" type="submit" onclick="validiraj()"></button>-->
-				<input id="posalji" type="button" value="Submit" onclick="validiraj()">
+				<input id="posalji" type="submit" value="Submit">
 				<!--<input id="ponisti" type="reset" value="Reset")"> -->
+				<br/><br/><br/>
 			</form>
 		</div>
 

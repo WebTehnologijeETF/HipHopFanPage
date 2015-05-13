@@ -5,10 +5,11 @@
 *{
 margin:0px;
 padding: 0px;
+
 }
 
 body {
-	
+	overflow-x:hidden;
 	background: url("slike/gr2.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -23,6 +24,16 @@ body {
 	min-height: 100%;
 	}
 	*/
+#homepage, #tablepage, #kontaktpage, #linkpage, #downloadpage, #grafitipage, #mixtapepage, #kontaktpagephp {
+	display: inline-block;
+	position: relative;
+	left: 170px;
+	top: 208px;
+	width: 950px;
+	min-height: 100%;
+	background-color: #F6FFF6;
+}
+
 #header {
 	position: absolute;
 	left: 170px;
@@ -31,8 +42,9 @@ body {
 	/*opacity: 0.7;*/
 	height: 180px;
 	width: 950px;
-	}
-.logo img{
+}
+
+.logo img {
 	margin: 4px;	
 	width: 220px;
 	height: 160px;
@@ -87,7 +99,7 @@ body {
 	}
 
 .menuList {
-	position: relative;
+	position: absolute;
 	top: 208px;
 	width: 90px;
 	z-index: 1;
@@ -123,53 +135,6 @@ body {
 
 
 /* home*/
-#homepage {
-	display: block;
-	position: absolute;
-	left: 170px;
-	top: 208px;
-	width: 950px;
-	min-height: 100%;
-	margin-bottom: -60px;
-	}
-
-#footer-hp {
-	height: 70px;
-	width: 950px;
-	background-color: #F6FFF6;
-	position: relative;
-	bottom: -1670px;
-	left: 170px;
-	border: solid 2px;
-	border-color: #0F1F2E;
-	}
-
-#footer-hp li {
-	display: inline;
-	position: relative;
-	left: 450px;
-	}
-#footer-hp img {
-	margin-top: 8px;
-	max-height: 30px;
-	max-width: 30px;
-	}
-#footer-hp p {
-	position: absolute;
-	left: 476px;
-	bottom: 10px;
-	}
-
-/*
-	display: block;
-	position: absolute;
-	top: 194px;
-	float: left;
-	width: 1000px;
-	min-height: 98.9%;
-	margin-bottom: -60px;
-	
-	}*/
 #news {
 		
 	}
@@ -177,16 +142,15 @@ body {
 .full-title {
 	color: black;
 	}
+
 #headline {
-	background: #F6FFF6;
 	width: 620px;
 	height: 58px;
-	margin: 0px;
-	padding: 0px;
 	border: solid 1px;
 	border-radius: 20px;
 	}
-#headline h2{
+
+#headline h3{
 	color: #0C0D0D;
 	font-weight: bold;
 	font-size: 25px;
@@ -196,31 +160,18 @@ body {
 	margin-left: 15px;
 	padding: 10px;
 	font-style: italic;
-	
 	}
 
 .post {
-	background-color: #F6FFF6;
-	/*opacity: 0.7;*/
 	width: 620px;
 	height: 350px;
 	border: solid 2px;
 	border-radius: 20px;
 	border-color: #0F1F2E;
-	}
-/*.break{
-    width: 220px;
-    position: relative;
-    top: -27px;
-	left: 15px;
-    clear: both;
-    margin: 20px 0;
-    border: 1px solid #001F1F;
-    box-shadow: 0 5px 5px #333;
-}*/
+}
 
 .full-title {
-	padding: 6px;
+	padding: 4px;
 	margin-left: 12px;
 	margin-top: 5px;
 }
@@ -231,29 +182,24 @@ body {
 .full-title a:hover {
 	color: #798282;
 	}
-.autor {
+.autor, .date {
+	position: relative;
+	top: -12px;
 	font-family: Ubuntu;
 	font-size: 11px;
 	color: #121C2E;
-	padding:8px;
-	float: left;
-	}
-.date {
-	color: #121C2E;
-	font-family: Ubuntu;
-	font-size: 11px;
-	padding: 8px;
 	}
 .entry-content {
 	clear: both;
 	margin: 12px;
+
 	}
 .entry-content p {
-	position: absolute;
-	left: auto;
-	float: left;
+	position: relative;
+	top: -7px;
 	color: #0C0D0D;
 	width: 355px;
+	font-size: 15px;
 	}
 .entry-content p a {
 	color:#1F2E2E;
@@ -274,7 +220,7 @@ body {
 	top: 0px;
 	left: 622px;
 	float: right;
-	width: 333px;
+	width: 329px;
 	height: auto;
 	}
 .recommend {
@@ -336,10 +282,11 @@ body {
 }
 .quotes p {
 	float: left;
-	width: 20px;
-	margin-top: 15px;
-	margin-left: 15px;
+	position: relative;
+	top: 15px;
+	left: 15px;
 	font-style: italic;
+	font-size: 13px;
 }
 .quotes h2 {
 	margin-left: 15px;
@@ -355,23 +302,9 @@ body {
 	}
 
 /*tables */
-#tablepage, #kontaktpage, #linkpage, #downloadpage, #grafitipage {
-	display: block;
-	position: absolute;
-	left: 170px;
-	top: 208px;
-	width: 950px;
-	min-height: 100%;
-	margin-bottom: -60px;
-	background: #F6FFF6;
-	}
-/*div.wrapper {
-	display: block;
-	min-height: 89.9%;
-	margin-bottom: -60px;
-}*/
+
 #tabela { 
-	position: absolute;
+	position: relative;
 	top: 20px;
 	width: 380px;
 	margin: 15px;
@@ -489,7 +422,8 @@ th , td{
 	width: 200px;
 	height: 200px;
 	position: relative;
-	top: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 .t-desno h4 {
 	margin-top: 30px;
@@ -515,7 +449,8 @@ th , td{
 .lista {
 	list-style-image: url("slike/bullet.png");
 	margin-left: 350px;
-	margin-top: 115px;
+	margin-top: 75px;
+	margin-bottom: 75px;
 	padding: 15px;
 }
 .lista a {
@@ -529,14 +464,18 @@ th , td{
 }
 
 
-.textbox {
+.textbox{
 	position: relative;
 	left: 50px;
 	margin-top: 30px;
 	font-family: Ubuntu;
 }
 
+
 /*grafitipage*/
+.photos {
+	margin-bottom: 30px;
+}
 
 .photos img {
 	max-width: 250px;
@@ -555,6 +494,8 @@ th , td{
 	top: -28px;
 }
 
+/*kontaktpage*/ 
+
 #kontaktpage p {
 	margin-top: 22px;
 	margin-left: 39px;
@@ -565,36 +506,44 @@ th , td{
 }
 
 #posalji, #ponisti {
+	clear: both;
 	width: 7em;
 	height: 2em;
-	margin-top: 124px;
-	position: absolute;
-	left: 430px;
-	float: right;
+	position: relative;
+	left: -15em;
+	margin-top: 7.9em;
+	
 }
 
 #ime, #prezime, #email, #tel, #mjesto, #grad, #pbroj{
 	width: 15em;
 }
 
+#por {
+	position: relative;
+	bottom: 20px;
+	float: left;
+}
+
 
 #imeslika, #prezimeslika, #emailslika, #telslika, #gradslika, #pbrojslika {
 	visibility: hidden;
-	position: absolute;
-	left: 210px;	
+	position: relative;
+	left: 0px;	
 }
 #imeslika2, #prezimeslika2, #emailslika2, #telslika2, #gradslika2, #pbrojslika2 {
 	visibility: hidden;
 	position: absolute;
-	left: 210px;
+	left: 230px;
 	height: 16px;
 	width: 16px;	
 }
 
 #porslika, #porslika2 {
 	visibility: hidden;
-	position: absolute;
-	left: 430px;
+	position: relative;
+	top: -8em;
+	left: -11em;
 	height: 16px;
 	width: 16px;
 }
@@ -602,7 +551,7 @@ th , td{
 #labIme, #labPrezime, #labEmail2, #labEmail, #labTel, #labGrad, #labPBroj {
 	visibility: hidden;
 	position: absolute;
-	left: 230px;
+	left: 250px;
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
@@ -610,7 +559,7 @@ th , td{
 #labPBroj2 {
 	visibility: hidden;
 	position: absolute;
-	left: 230px;
+	left: 250px;
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
@@ -619,16 +568,36 @@ th , td{
 
  #labPor {
  	visibility: hidden;
- 	position: absolute;
-	left: 452px;
+ 	position: relative;
+	left: 1em;
+	top: 0.7em;
 	color: red;
 	font-size: 13px;
 	font-family: Tahoma;
 	float: left;
 }
 
+#kontaktpagephp p {
+	left: 1250px;
+	font-size: 13px;
+	color: red;
 
+}
 
+#kontaktpagephp img {
+	left: 250px;
+ }
+ #submit {
+ 	position: relative;
+ 	left: 20px;
+ 	top: 8.3em;
+ }
+
+/*
+.eror_lab {
+	left: 250px;
+	color: red;
+}*/
 
 /* break-footer
 .break-footer {
@@ -642,13 +611,45 @@ th , td{
     box-shadow: 0 5px 5px #333;
 }
 */
+#mixtapepage p {
+	margin-top: 40px;
+	margin-left: 50px;
+}
+#mixtapepage label {
+	font-family: Tahoma;
+	font-size: 14px;
+	margin-left: 50px;
+
+}
+#ID, #naziv, #url, #slika {
+	font-family: Tahoma;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 45em;
+ }
+#promijeni, #obrisi{
+	position: relative;
+ 	left: 50px;
+ 	width: 80px;
+ 	height: 25px;
+
+ }
+
+ #dodaj {
+ 	position: relative;
+ 	left: 29.5em;
+ 	width: 80px;
+ 	height: 25px;
+ 	
+ } 
 
 #footer {
 	height: 70px;
 	width: 950px;
 	background-color: #F6FFF6;
 	position: relative;
-	bottom: -850px;
+	top: 12.8em;
 	left: 168px;
 	border: solid 2px;
 	border-color: #0F1F2E;
@@ -662,6 +663,7 @@ th , td{
 	position: absolute;
 	left: 476px;
 	bottom: 10px;
+
 	}
 
 #footer img {
@@ -669,4 +671,7 @@ th , td{
 	max-height: 30px;
 	max-width: 30px;
 	} 
+
+
+
 
