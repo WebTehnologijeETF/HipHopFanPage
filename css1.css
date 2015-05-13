@@ -184,7 +184,7 @@ body {
 	}
 .autor, .date {
 	position: relative;
-	top: -12px;
+	top: -8px;
 	font-family: Ubuntu;
 	font-size: 11px;
 	color: #121C2E;
@@ -196,7 +196,7 @@ body {
 	}
 .entry-content p {
 	position: relative;
-	top: -7px;
+	top: -1px;
 	color: #0C0D0D;
 	width: 355px;
 	font-size: 15px;
@@ -207,7 +207,8 @@ body {
 	}
 .entry-content img {
 	position: relative;
-	top: 23px;
+	top: 35px;
+	left: 5px;
 	float: right;
 	max-width: 240px;
 	max-height: 230px;
