@@ -50,6 +50,7 @@
 </div>
 
 <?php 
+session_start();
 //varijable
 	$imeErr=$prezimeErr=$emailErr=$telErr=$gradErr=$pbrojErr=$porErr="";
 	$ime=$prezime=$email=$tel=$grad=$pbroj=$por="";
@@ -169,6 +170,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	<div class="phpispis">
 <?php
 		if($valid) {
+			$_SESSION["ime"]=$ime;
+			$_SESSION["prezime"]=$prezime;
+			$_SESSION["email"]=$email;
+		//	if($grad!="")
+				$_SESSION["grad"]=$grad;
+		//	if($pbroj!="")
+				$_SESSION["pbroj"]=$pbroj;
+		//	if($tel!="")
+				$_SESSION["tel"]=$tel;
+			$_SESSION["poruka"]=$por;
 
 		print "<h4>Provjerite da li ste ispravno popunili kontakt formu</h4><br>";
 			

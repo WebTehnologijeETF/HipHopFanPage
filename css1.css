@@ -30,7 +30,7 @@ body {
 	left: 170px;
 	top: 208px;
 	width: 950px;
-	min-height: 100%;
+	min-height: 450px;
 	background-color: #F6FFF6;
 }
 
@@ -594,24 +594,24 @@ th , td{
  	top: 8.3em;
  }
 
-/*
-.eror_lab {
-	left: 250px;
-	color: red;
-}*/
-
-/* break-footer
-.break-footer {
-    width: 900px;
-    position: absolute;
-    bottom: -210px;
-	left: 190px;
-    clear: both;
-    margin: 20px 0;
-    border: 1px solid #001F1F;
-    box-shadow: 0 5px 5px #333;
+/*saljipagephp*/
+#saljipagephp h3 {
+	font-size: 25px;
+	position: relative;
+	left: 270px;
+	top: 50px;
 }
-*/
+#saljipagephp a{
+	text-decoration: none;
+	position: relative;
+	left: 300px;
+	top: 70px;
+	font-size: 20px;
+	color: black;
+
+}
+ 
+/*mixtapepage*/
 #mixtapepage p {
 	margin-top: 40px;
 	margin-left: 50px;

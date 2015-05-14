@@ -49,38 +49,55 @@
 		</div>	
 </div>
 
-
- 
-
 <div id="saljipagephp">
-	
+	<div class="textbox">
 
 <?php 
 
-require ("sendgrid-php/sendgrid-php.php");
+session_start();
+require 'sendgrid-php/sendgrid-php.php';
 
-$message="Ime: ".($_POST["ime"])."<br/>Prezime: ".($_POST["prezime"])."<br/>Email: ".($_POST["email"]);
+function unosTexta($txt) {
+	$txt=trim($txt);
+	$txt=stripcslashes($txt);
+	$txt=htmlspecialchars($txt);
+return $txt;
+}
+      // print "<br><h3>Mail je uspješno poslan!</h3><br><br/>";
+		//echo '<script>alert("Mail uspješno poslan! Hvala što ste nas kontaktirali");</script>';
+		//print "<a href='index.php' id='nazad'>Vrati se na početnu!</a><br/><br/><br/><br/>";
+	//	print "<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>";
 
+$ime=unosTexta($_SESSION["ime"]);
+$prezime=unosTexta($_SESSION['prezime']);
+$email=unosTexta($_SESSION["email"]);
+$grad=unosTexta($_SESSION["grad"]);
+$pbroj=unosTexta($_SESSION["pbroj"]);
+$tel=unosTexta($_SESSION["tel"]);
+$por=unosTexta($_SESSION["poruka"]);
+
+$message=("Ime: ".$ime."<br/>Prezime: ".$prezime."<br/>Email: ".$email."<br/>Grad: ".$grad." ".$pbroj."<br/>Telefon: ".$tel."<br/>Poruka: ".$por);
+//echo ($message);
 //sendgrid_013f7
 // get account info from OpenShift environment variable
 $service_plan_id = "sendgrid_013f7"; // your OpenShift Service Plan ID
 $account_info = json_decode(getenv($service_plan_id), true);
 
-$asendgrid = new SendGrid($account_info['username'], $account_info['password']);
-$email    = new SendGrid\Email();
+$sendgrid = new SendGrid($account_info['username'], $account_info['password']);
+$email = new SendGrid\Email();
 
 $email->addTo("lejla.a36@gmail.com")
-	  ->addCc("lejla_agic@hotmail.com")
+	  ->addCc("iprazina1@etf.unsa.ba")
       ->setFrom("lagic1@etf.unsa.ba")
-      ->setSubject("Sending with SendGrid is Fun")
-      ->setHtml("and easy to do anywhere, even with PHP")
-      ->setText($message);
+      ->setSubject("SendGrid")
+      ->setHtml($message);    
 
 try {
 	    $sendgrid->send($email);
-	    print "<br><h2>Mail je uspješno poslan!</h2><br>";
-		echo '<script>alert("Mail uspješno poslan! Hvala što ste nas kontaktirali");</script>';
-		print "<a href='index.php' id='back'>Vrati se na početnu!</a>";
+	    print "<br><h3>Mail je uspješno poslan!</h3><br><br/>";
+		//echo '<script>alert("Mail uspješno poslan! Hvala što ste nas kontaktirali");</script>';
+		print "<a href='index.php' id='nazad'>Vrati se na početnu!</a><br/><br/><br/><br/>";
+		//print "<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>";
 } 
 catch(\SendGrid\Exception $e) {
 	    echo $e->getCode();
@@ -88,12 +105,11 @@ catch(\SendGrid\Exception $e) {
         	echo $er;
     }
  }
+
+
 ?>
-		
-
 </div>
-
-		<div class="break-footer"></div>
+</div>
 	<footer id="footer">
         <ul class = "sn_icons">
             <li><a href="#"><img src="slike/fb.png"  alt="fb logo"></a></li>
@@ -102,8 +118,7 @@ catch(\SendGrid\Exception $e) {
 			<li><a href="#"><img src="slike/tu.png"  alt="tu logo"></a></li>
         </ul>
        <p>&copy; Nlghtmare</p>
-	</footer> 
-		
+	</footer> 	
 </div>
 	<script src="js/kontakt.js"></script> 
 	<script src="js/skripta.js"></script>
