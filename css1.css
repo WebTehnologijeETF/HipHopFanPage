@@ -24,7 +24,7 @@ body {
 	min-height: 100%;
 	}
 	*/
-#homepage, #tablepage, #kontaktpage, #linkpage, #downloadpage, #grafitipage, #mixtapepage, #kontaktpagephp {
+#homepage, #tablepage, #kontaktpage, #linkpage, #downloadpage, #grafitipage, #mixtapepage, #kontaktpagephp, #saljipagephp {
 	display: inline-block;
 	position: relative;
 	left: 170px;
@@ -501,7 +501,7 @@ th , td{
 	margin-top: 22px;
 	margin-left: 39px;
 	font-size: 40px;
-	font-style: bold;
+	font-weight: bold;
 	font-family: Tangerine, Tahoma;
 	color: black;
 }

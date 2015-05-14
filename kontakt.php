@@ -56,6 +56,7 @@
 	$slikaime=$slikaprezime=$slikaemail=$slikatel=$slikagrad=$slikapbroj=$slikapor="";
 	$lnbr="<br/>";
 	$valid=true;
+	$textReg="/^[a-zšđčćž]+$/i";
 
 //xss protekcija
 function unosTexta($txt) {
@@ -69,37 +70,32 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 {
 		
 //ime
-	if(empty($_POST["ime"])) {
+	$ime=unosTexta($_POST["ime"]);
+	if(empty($ime) || (!preg_match($textReg, $ime))) {
 		$imeErr="Unesite validno ime (samo slova)!<br/><br/>";
 		$slikaime="slike/error.png";
 		$valid=false;
 	}	
-	elseif (!ctype_alpha(trim($_POST["ime"]))) {
+	/*elseif (!ctype_alpha(trim($ime)) {
 		$imeErr="Unesite validno ime (samo slova)!<br/><br/>";
 		$slikaime="slike/error.png";
 		$valid=false;
-	}
-	else {
-		$ime=unosTexta($_POST["ime"]);
-		$slikaime="slike/valid.png";
-	}
+	}*/
 
 	
 //prezime
-	if(empty($_POST["prezime"])) {
+	$prezime=unosTexta($_POST["prezime"]);
+	if(empty($prezime) || (!preg_match($textReg, $ime))) {
 		$prezimeErr="Unesite validno prezime (samo slova)!<br/><br/>";
 		$slikaprezime="slike/error.png";
 		$valid=false;
 	}
-	elseif (!ctype_alpha(trim($_POST["prezime"]))) {
+/*	elseif (!ctype_alpha(trim($_POST["prezime"]))) {
 		$prezimeErr="Unesite validno prezime (samo slova)!<br/><br/>";
 		$slikaprezime="slike/error.png";
 		$valid=false;
 	}
-	else {
-		$prezime=unosTexta($_POST["prezime"]);
-		$slikaprezime="slike/valid.png";
-	}
+*/	
 	
 //email
 	if(empty($_POST["email"])) {
@@ -133,13 +129,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     }
 //grad
     $grad=($_POST["grad"]);
-    if($grad!=""){
-	    if (!ctype_alpha(trim($_POST["grad"]))) {
+	    if (!empty($grad) && (!preg_match($textReg, $grad))) {
 			$gradErr="Mogu biti samo slova!<br/><br/>";
 			$slikagrad="slike/error.png";
 			$valid=false;
 		}
-	}
+	
 //postanski broj
 	$pbroj=($_POST["pbroj"]);
 	$numReg = "/^[0-9]+$/i";
@@ -192,7 +187,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 				echo ("Poruka: ".$por);
 				print "<br><br>";	
 				print("<h4>Da li ste sigurni da želite poslati ove podatke?</h4><br>");			
-				print("<form id='sigforma' action='salji.php' method='GET'>
+				print("<form id='sigforma' action='salji.php' method='POST'>
 					   		<input id = 'siguran' type='submit' value = 'Siguran sam'>
 					   </form><br>");
                 print("<h5>Ako ste pogrešno popunili formu, možete ispod prepraviti unesene podatke.</h5>");
@@ -203,7 +198,7 @@ else {
 ?>
 
 </div>
-		<form name="forma" id="forma" action="kontakt.php" method="post" >	 
+		<form name="forma" id="forma" action="kontakt.php" method="POST" >	 
 				<br>
 				Ime: * <br>
 				<input id="ime" required="required"  type="text" name="ime" value=<?=$ime;?>> 
