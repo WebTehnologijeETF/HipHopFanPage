@@ -56,14 +56,10 @@
 	
 
 <?php 
+
 require ("sendgrid-php/sendgrid-php.php");
 
-function unosTexta($txt){
-	$txt=trim($txt);
-	$txt=stripcslashes($txt);
-	$txt=htmlspecialchars($txt);
-	return $txt;
-}
+$message="Ime: ".($_POST["ime"])."<br/>Prezime: ".($_POST["prezime"])."<br/>Email: ".($_POST["email"]);
 
 //sendgrid_013f7
 // get account info from OpenShift environment variable
@@ -77,11 +73,13 @@ $email->addTo("lejla.a36@gmail.com")
 	  ->addCc("lejla_agic@hotmail.com")
       ->setFrom("lagic1@etf.unsa.ba")
       ->setSubject("Sending with SendGrid is Fun")
-      ->setHtml("and easy to do anywhere, even with PHP");
+      ->setHtml("and easy to do anywhere, even with PHP")
+      ->setText($message);
 
 try {
 	    $sendgrid->send($email);
 	    print "<br><h2>Mail je uspješno poslan!</h2><br>";
+		echo '<script>alert("Mail uspješno poslan! Hvala što ste nas kontaktirali");</script>';
 		print "<a href='index.php' id='back'>Vrati se na početnu!</a>";
 } 
 catch(\SendGrid\Exception $e) {
