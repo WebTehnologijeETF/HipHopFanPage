@@ -55,16 +55,23 @@
 	
 	<div id="homepage">
 		<div id="vertical-line"></div>
+		
 		<div id="news">
 		
 			<div id="headline">
 				<h3>Novosti</h3>
 				<div class="break"></div>
 			</div>
-			
+
 			<div id="posts">
+			
+			<?php include 'novosti.php';
+		?>
+		
+	<!--	<article class="post">
+
+
 				
-				<article class="post">
 					<div class="entry-title">
 						<h2 class="full-title"><a href="#">The Miseducation Of Lauryn Hill' Will Be Entered Into the Library of Congress</a></h2>
 					</div>
@@ -83,7 +90,7 @@
 						<a href="#">Detaljnije...</a>
 						</p>
 					</div>
-					<!--<div class="break"></div>-->
+					
 				</article>
 				
 				<article class="post">
@@ -104,7 +111,6 @@
 						Little League practice and a group of us debated wandering over before quickly realizing that we weren’t exactly wanted. 
 						<a href="#">Detaljnije</a>
 						</p>
-					</div><!--<div class="break"></div>-->
 				</article>		
 			
 				<article class="post">
@@ -129,7 +135,6 @@
 						<a href="#">Detaljnije</a>
 						</p>
 					</div>
-					<!--<div class="break"></div>-->
 				</article>
 		
 				<article class="post">
@@ -150,12 +155,13 @@
 						   I contact 11 L's and max in heaven 
 						<a href="#">Detaljnije</a>
 						</p>
-					</div>
-					<!--<div class="break"></div>-->
+					</div> 
+
 				</article>
+-->
+					</div> 
 		
-		
-			</div>
+				
 		</div>		
 		<div class="desno">
 			<div class="recommend">
@@ -193,12 +199,20 @@
 				<img src="slike/photo.jpg" alt="photo">
 				<p>"blablablalbalblalblalblalbalblabla <br>lblalaalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
 				<h5 class="Qa">autor</h5>
+
+				<img src="slike/photo.jpg" alt="photo">
+				<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
+				<h5 class="Qa">autor</h5>
+
+				
+				<img src="slike/photo.jpg" alt="photo">
+				<p>"blablablalbalblalblalblalbalblabla <br>lblalaalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
+				<h5 class="Qa">autor</h5>
 			</div>
 		
-		</div>
+		</div> 
 		
-	</div>
-	<div class="break-footer-hp"></div>
+	</div> 
 		<footer id="footer">
             <ul class = "sn_icons">
                 <li><a href="#"><img src="slike/fb.png" alt="fb logo"></a></li>

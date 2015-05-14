@@ -86,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	
 //prezime
 	$prezime=unosTexta($_POST["prezime"]);
-	if(empty($prezime) || (!preg_match($textReg, $ime))) {
+	if(empty($prezime) || (!preg_match($textReg, $prezime))) {
 		$prezimeErr="Unesite validno prezime (samo slova)!<br/><br/>";
 		$slikaprezime="slike/error.png";
 		$valid=false;

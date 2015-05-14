@@ -148,6 +148,9 @@ body {
 	height: 58px;
 	border: solid 1px;
 	border-radius: 20px;
+	float: left;
+	position: absolute;
+
 	}
 
 #headline h3{
@@ -158,22 +161,27 @@ body {
 	width: 60px;
 	margin-top: 10px;
 	margin-left: 15px;
-	padding: 10px;
 	font-style: italic;
 	}
 
-.post {
+#posts {
 	width: 620px;
-	height: 350px;
+	min-height: 550px;
+	position: relative;
+	float: left;
 	border: solid 2px;
 	border-radius: 20px;
 	border-color: #0F1F2E;
+	top: 60px;
+	margin-bottom: 58px;
 }
 
 .full-title {
-	padding: 4px;
-	margin-left: 12px;
-	margin-top: 5px;
+	clear: both;
+	position: relative;
+	top:-150px;
+	padding: 5px;
+	
 }
 .full-title a {
 	color: #0C0D0D;
@@ -184,48 +192,60 @@ body {
 	}
 .autor, .date {
 	position: relative;
-	top: -8px;
+	top:-140px;
 	font-family: Ubuntu;
-	font-size: 11px;
+	font-size: 12px;
 	color: #121C2E;
 	}
-.entry-content {
+/*.entry-content {
 	clear: both;
 	margin: 12px;
 
-	}
-.entry-content p {
+	}*/
+.post {
 	position: relative;
-	top: -1px;
+	top: 5px;
+	max-width: 620px;
+	min-height: 300px;
+	clear: both;
+	margin-left: 5px;	
+}
+.entry-content {
+	position: absolute;
+	top: 110px;
 	color: #0C0D0D;
-	width: 355px;
+	width: 350px;
 	font-size: 15px;
+	margin-right: 2px;
+
 	}
-.entry-content p a {
+.entry-content a {
 	color:#1F2E2E;
 	text-decoration: none;
 	}
-.entry-content img {
+.post img {
 	position: relative;
-	top: 35px;
-	left: 5px;
+	top: 100px;
+	left:-4px;
 	float: right;
-	max-width: 240px;
-	max-height: 230px;
+	max-width: 235px;
+	max-height: 220px;
 	border: solid 2px;
 	border-radius: 12px;
+	
 	}
 
 .desno {
 	position: absolute;
-	top: 0px;
-	left: 622px;
+	left:622px;
+	
+	/*left: 622px;*/
 	float: right;
-	width: 329px;
-	height: auto;
+	max-width: 328px;
+	min-height: 120px;
 	}
 .recommend {
-	height: 675px;
+	min-height: 75px;
 	border: solid 2px;
 	border-radius: 20px;
 	border-color: #0F1F2E;
@@ -236,13 +256,12 @@ body {
 	text-align: left;
 	text-decoration: none;
 	margin-top: 5px;
-	margin-left: 5px;
+	margin-left: 25px;
 	padding: 8px;
 	}	
 .recommend>h4 {
 	margin: 4px;
 	margin-left: 25px;
-	padding: 8px;
 	text-decoration: none;
 	}
 .recommend h4 a {
@@ -262,25 +281,27 @@ body {
 	color: black;
 }
 .recommend>img {
-	width: 200px;
-	height: 200px;
+	max-width: 200px;
+	max-height: 200px;
 	margin-left: 25px;
 	padding: 8px;
 	}
 .quotes {
-	height: 795px;
 	border: solid 2px;
 	border-radius: 20px;
 	border-color: #0F1F2E;
 	background: #F6FFF6;
+	min-height: 50px;
+	position: relative;
+
 	}
 .quotes img {
 	max-width: 70px;
 	max-height: 70px;
 	float: right;
 	margin-right: 15px;
-	margin-top: 15px;
-}
+	margin-top: 10px;
+	}
 .quotes p {
 	float: left;
 	position: relative;
@@ -297,6 +318,7 @@ body {
 	clear: both;
 	margin-top: 10px;
 	margin-right: 15px;
+	margin-bottom: 5px;
 	text-align: right;
 	font-style: italic;
 	
@@ -497,6 +519,10 @@ th , td{
 
 /*kontaktpage*/ 
 
+#kontaktpage>#kontaktnaslov {
+	font-size: 40px;
+	font-weight: normal;
+}
 #kontaktpage p {
 	margin-top: 22px;
 	margin-left: 39px;

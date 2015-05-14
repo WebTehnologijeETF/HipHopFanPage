@@ -87,8 +87,9 @@ $sendgrid = new SendGrid($account_info['username'], $account_info['password']);
 $email = new SendGrid\Email();
 
 $email->addTo("lejla.a36@gmail.com")
-	  ->addCc("iprazina1@etf.unsa.ba")
+	 // ->addCc("iprazina1@etf.unsa.ba")
       ->setFrom("lagic1@etf.unsa.ba")
+      ->setReplyTo($email)
       ->setSubject("SendGrid")
       ->setHtml($message);    
 
