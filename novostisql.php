@@ -10,13 +10,15 @@
           print "SQL greška: " . $greska[2];
           exit();
      }
-
-   foreach ($rezultat as $novosti) {
+     foreach ($rezultat as $novosti) {
            $naslov=$novosti['naslov'];
            $autor=$novosti['autor'];
            $tekst=$novosti['tekst'];
-           
-           
+          // $slika=$novosti['slika'];
+           //$aaa=$veza->query($rezultat);
+    // $slika=mysqli_fetch_array($aaa);
+  //  $echo '<img src="data:image/jpg;base64, '.base64_encode($slika->load()).' "/>';
+   
 //ne radi blob u image!!!
 
     print "<div class = 'post'>
@@ -26,6 +28,24 @@
             <img src =".htmlentities($slika, ENT_QUOTES)." alt = 'slika'>
             <p >".htmlspecialchars(trim($tekst), ENT_QUOTES, 'UTF-8')."</p>
            <div>";
+
+    $komentari = $veza->query("SELECT COUNT(*) 
+                               FROM komentar 
+                               WHERE novost_id =".$novosti['id']);
+    $broj = $komentari->fetchColumn();
+   // $broj=mysql_num_rows($komentari);
+
+      if($broj[0]==1) {
+        print "<small>".$broj[0]." komentar</small>";
+      }
+
+      elseif($broj[0]>1) {
+        print "<small".$broj[0]." komentara</small>";
+      }
+    
+
+    else print "<small>" . "Nema komentara" . "</small>";
+  
    }
 
 
