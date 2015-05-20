@@ -30,7 +30,7 @@ body {
 	left: 170px;
 	top: 208px;
 	width: 950px;
-	min-height: 450px;
+	min-height: 480px;
 	background-color: #F6FFF6;
 }
 
@@ -174,25 +174,40 @@ body {
 	border-color: #0F1F2E;
 	top: 60px;
 	margin-bottom: 58px;
-}
+	}
 
 .full-title {
 	clear: both;
 	position: relative;
-	top:-150px;
+	top:-50px;
 	padding: 5px;
-	
-}
+	}
+
 .full-title a {
 	color: #0C0D0D;
 	text-decoration: none;
 	}
+
 .full-title a:hover {
 	color: #798282;
 	}
+
 .autor, .date {
 	position: relative;
-	top:-140px;
+	top:-37px;
+	left: 5px;
+	font-family: Ubuntu;
+	font-size: 12px;
+	color: #121C2E;
+	}
+.post1 h2 {
+	clear: both;
+	position: absolute;
+	top: -10px;
+}
+.autor1, .date1 {
+	position: relative;
+	top: 25px;
 	font-family: Ubuntu;
 	font-size: 12px;
 	color: #121C2E;
@@ -204,11 +219,32 @@ body {
 	}*/
 .post {
 	position: relative;
-	top: 5px;
+	top: 75px;
 	max-width: 620px;
 	min-height: 300px;
 	clear: both;
 	margin-left: 5px;	
+}
+.post1 {
+	position: relative;
+	top: 25px;
+	min-height: 550px;
+	clear: both;
+	margin-left: 5px;
+}
+.post1 img {
+	position: relative;
+	top: 40px;
+	left: -35px;
+	float: right;
+	max-width: 335px;
+	max-height: 320px;
+	border: solid;
+	border-radius: 12px;
+}
+
+.post a {
+	cursor: pointer;
 }
 .entry-content {
 	position: absolute;
@@ -219,6 +255,15 @@ body {
 	margin-right: 2px;
 
 	}
+.post1> p {
+	position: relative;
+	top: 40px;
+	color: #0C0D0D;
+	width: 500px;
+	font-size: 15px;
+	margin-right: 2px;
+}
+
 .entry-content a {
 	color:#1F2E2E;
 	text-decoration: none;
@@ -291,9 +336,8 @@ body {
 	border-radius: 20px;
 	border-color: #0F1F2E;
 	background: #F6FFF6;
-	min-height: 50px;
+	min-height: 60px;
 	position: relative;
-
 	}
 .quotes img {
 	max-width: 70px;
@@ -306,13 +350,15 @@ body {
 	float: left;
 	position: relative;
 	top: 15px;
-	left: 15px;
+	left: 12px;
 	font-style: italic;
 	font-size: 13px;
+	margin-top: 2px;
 }
 .quotes h2 {
 	margin-left: 15px;
 	margin-top: 8px;
+	padding: 5px;
 }
 .quotes h5 {
 	clear: both;
@@ -670,6 +716,14 @@ th , td{
  	height: 25px;
  	
  } 
+
+ /*detaljnije*/
+ .detaljnije>.autor {
+ 	font-size: 15px;
+ 	position: relative;
+ 	top: 40px;
+ 	left: 50px;
+ }
 
 #footer {
 	height: 70px;

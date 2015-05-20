@@ -54,8 +54,7 @@
 	</div>
 	
 	<div id="homepage">
-		<div id="vertical-line"></div>
-		
+			
 		<div id="news">
 		
 			<div id="headline">
@@ -65,7 +64,9 @@
 
 			<div id="posts">
 			
-			<?php include 'novosti.php';
+			<?php
+		//	 include 'novosti.php';
+			include 'novostisql.php';
 		?>
 		
 	<!--	<article class="post">
@@ -204,10 +205,6 @@
 				<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
 				<h5 class="Qa">autor</h5>
 
-				
-				<img src="slike/photo.jpg" alt="photo">
-				<p>"blablablalbalblalblalblalbalblabla <br>lblalaalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-				<h5 class="Qa">autor</h5>
 			</div>
 		
 		</div> 
