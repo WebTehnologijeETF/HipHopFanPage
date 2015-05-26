@@ -228,10 +228,10 @@ body {
 	clear: both;
 	margin-left: 5px;
 }
-.post1 img {
+.post1 .slika {
 	position: relative;
-	top: 40px;
-	left: -35px;
+	top: 100px;
+	left: -85px;
 	float: right;
 	max-width: 335px;
 	max-height: 320px;

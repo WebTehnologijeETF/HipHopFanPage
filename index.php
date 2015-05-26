@@ -60,7 +60,10 @@
 				<div class="break"></div>
 			</div>
 	
-			
+			<div id="posts">
+			<?php include "novostisql.php";	?>
+		</div>
+		
 		<div class="desno">
 			<div class="recommend">
 				<h2>Preporučujemo</h2>
@@ -104,9 +107,6 @@
 			</div>
 		
 		</div> 
-		<div id="posts">
-			<?php include "novostisql.php";	?>
-		</div>
 		
 	</div> 
 		<footer id="footer">
