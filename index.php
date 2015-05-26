@@ -54,116 +54,13 @@
 	</div>
 	
 	<div id="homepage">
-			
-		<div id="news">
-		
+					
 			<div id="headline">
 				<h3>Novosti</h3>
 				<div class="break"></div>
 			</div>
-
-			<div id="posts">
+	
 			
-			<?php
-		//	 include 'novosti.php';
-			include 'novostisql.php';
-		?>
-		
-	<!--	<article class="post">
-
-
-				
-					<div class="entry-title">
-						<h2 class="full-title"><a href="#">The Miseducation Of Lauryn Hill' Will Be Entered Into the Library of Congress</a></h2>
-					</div>
-					
-					<div class="entry-content">
-						<div class="photo">
-							<img src="slike/LaurynHill.jpg" alt="slika1">
-						</div>
-						<div class="date">20MARCH 26, 2015</div>
-						<div class="autor">YESHA CALLAHAN</div>
-						<p>Each year the Library of Congress selects 25 recordings to add to their archive.
-						This year Lauryn Hill’s record-breaking album, The Miseducation of Lauryn Hill, will be included in the 25.
-						According to the press release, requirements for inclusion into the archive include recordings 
-						that are “culturally, historically, or aesthetically significant” and are at least 10 years old. 
-						The Library of Congress gave a lengthy explanation as to why they chose Hill’s debut album.
-						<a href="#">Detaljnije...</a>
-						</p>
-					</div>
-					
-				</article>
-				
-				<article class="post">
-					<div class="entry-title">
-						<h2 class="full-title"><a href="#">Eternal E: Eazy E, 20 Years Later</a></h2>
-					</div>
-					
-					<div class="entry-content">
-						<div class="photo">
-							<img src="slike/EazyE.jpg" alt="slika2">
-						</div>
-						<div class="date">MARCH 24, 2015</div>
-						<div class="autor">JEFF WEISS </div>
-						<p>It was 20 years ago this week that Eazy E cruised to that great safehouse in the sky. 
-						I’ll never forget first hearing the news that he had AIDS and was dying in Cedars-Sinai.
-						The radio station, 92.3 The Beat, kept public vigil. Dre and Cube and Bone Thugs reportedly filed
-						in to pay last respects to the legend. The hospital was only about a mile from where I had
-						Little League practice and a group of us debated wandering over before quickly realizing that we weren’t exactly wanted. 
-						<a href="#">Detaljnije</a>
-						</p>
-				</article>		
-			
-				<article class="post">
-					<div class="entry-title">
-						<h2 class="full-title"><a href="#">Frenkie i Sarajevska filharmonija</a></h2>
-					</div>
-					
-					<div class="entry-content">
-						<div class="photo">
-							<img src="slike/frenkie.jpg" alt="slika3">
-						</div>
-
-						<div class="date">MARCH 27, 2015.</div>
-						<div class="autor">FMJam </div>
-						<p>U rasprodanom Narodnom pozorištu u Sarajevu, Frenkie je sinoć 
-						nastupio sa Sarajevskom filharmonijom gdje je kao gost koncerta 
-						izveo pjesmu “Noćna smjena”. Ovo je ujedno bio prvi put da se u BiH 
-						ostvari fuzija domaćeg hip hop-a i klasične muzike. “Nevjerovatan osjećaj, 
-						ovo je nešto novo za mene i imao sam ogromnu tremu i veliki strah” – izjavio 
-						je Frenkie nakon koncerta koji je završen gromoglasnim aplauzom. 
-						Bila je ovo i odlična prilika za mlađu publiku da posjeti Narodno pozorište... 
-						<a href="#">Detaljnije</a>
-						</p>
-					</div>
-				</article>
-		
-				<article class="post">
-					<div class="entry-title">
-						<h2 class="full-title"><a href="#">Naslov3</a></h2>
-					</div>
-					
-					<div class="entry-content">
-						<div class="photo">
-							<img src="slike/nas.jpg" alt="slika4">
-						</div>
-						<div class="date">MARCH 20, 2015.</div>
-						<div class="autor">Nas </div>
-						<p>I wreck shit so much, the microphone'll need a paint job <br>
-						   My brain is incarcerated <br>
-						   Live at any jam, I couldn't count all the parks I raided <br>
-						   I hold a Mac-11, and attack a reverend <br>
-						   I contact 11 L's and max in heaven 
-						<a href="#">Detaljnije</a>
-						</p>
-					</div> 
-
-				</article>
--->
-					</div> 
-		
-				
-		</div>		
 		<div class="desno">
 			<div class="recommend">
 				<h2>Preporučujemo</h2>
@@ -177,7 +74,6 @@
 					<img src="slike/kendi.jpg" alt="Kendi">
 					<p>Prvi Kendijev album možete download-ovati <a href="http://www.hulkshare.com/bassivity/kendi-van-dometa-www-bassivitydigital-com" target="blank">ovdje</a></p>			
 			</div>
-		
 		
 			<div class="quotes">
 				
@@ -208,6 +104,9 @@
 			</div>
 		
 		</div> 
+		<div id="posts">
+			<?php include "novostisql.php";	?>
+		</div>
 		
 	</div> 
 		<footer id="footer">

@@ -135,9 +135,7 @@ body {
 
 
 /* home*/
-#news {
-		
-	}
+
 
 .full-title {
 	color: black;
@@ -179,32 +177,30 @@ body {
 .full-title {
 	clear: both;
 	position: relative;
-	top:-50px;
+	top:-150px;
 	padding: 5px;
 	}
 
-.full-title a {
-	color: #0C0D0D;
-	text-decoration: none;
-	}
-
-.full-title a:hover {
-	color: #798282;
-	}
-
-.autor, .date {
-	position: relative;
-	top:-37px;
-	left: 5px;
-	font-family: Ubuntu;
-	font-size: 12px;
-	color: #121C2E;
-	}
 .post1 h2 {
 	clear: both;
 	position: absolute;
 	top: -10px;
 }
+.full-title a {
+	color: #0C0D0D;
+	text-decoration: none;
+	}
+.full-title a:hover {
+	color: #798282;
+	}
+.autor, .date {
+	position: relative;
+	top:-140px;
+	left: 5px;
+	font-family: Ubuntu;
+	font-size: 12px;
+	color: #121C2E;
+	}
 .autor1, .date1 {
 	position: relative;
 	top: 25px;
@@ -219,12 +215,12 @@ body {
 	}*/
 .post {
 	position: relative;
-	top: 75px;
 	max-width: 620px;
 	min-height: 300px;
 	clear: both;
-	margin-left: 5px;	
+	left: 5px;	
 }
+
 .post1 {
 	position: relative;
 	top: 25px;
@@ -247,8 +243,9 @@ body {
 	cursor: pointer;
 }
 .entry-content {
-	position: absolute;
-	top: 110px;
+	position: relative;
+	left: 5px;
+	top: -120px;
 	color: #0C0D0D;
 	width: 350px;
 	font-size: 15px;
@@ -271,14 +268,18 @@ body {
 .post img {
 	position: relative;
 	top: 100px;
-	left:-4px;
+	left:-10px;
 	float: right;
 	max-width: 235px;
 	max-height: 220px;
 	border: solid 2px;
 	border-radius: 12px;
-	
 	}
+.post small {
+	position: relative;
+	top: -90px;
+	left: 5px;
+}
 
 .desno {
 	position: absolute;
@@ -752,7 +753,4 @@ th , td{
 	max-height: 30px;
 	max-width: 30px;
 	} 
-
-
-
 
