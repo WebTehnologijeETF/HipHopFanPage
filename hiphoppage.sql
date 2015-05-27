@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 27, 2015 at 02:39 AM
+-- Generation Time: May 27, 2015 at 10:31 PM
 -- Server version: 5.6.24-0ubuntu2
 -- PHP Version: 5.6.4-4ubuntu6
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `projekat`
+-- Database: `hiphoppage`
 --
 
 -- --------------------------------------------------------
@@ -30,18 +30,24 @@ CREATE TABLE IF NOT EXISTS `komentar` (
 `id` int(11) NOT NULL,
   `novost_id` int(11) NOT NULL,
   `autor` varchar(20) COLLATE utf8_slovenian_ci NOT NULL,
+  `email` varchar(30) COLLATE utf8_slovenian_ci NOT NULL,
   `tekst` text COLLATE utf8_slovenian_ci NOT NULL,
   `vrijeme` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
 
 --
 -- Dumping data for table `komentar`
 --
 
-INSERT INTO `komentar` (`id`, `novost_id`, `autor`, `tekst`, `vrijeme`) VALUES
-(3, 5, 'Autor1', 'komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar', '2015-05-27 00:24:29'),
-(7, 2, 'Anonymous', 'neki tekst neki tekst neki tekst neki tekst neki tekst neki tekst ', '2015-05-27 00:25:32'),
-(8, 2, 'Nisam s Klixa', 'ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ', '2015-05-27 00:26:12');
+INSERT INTO `komentar` (`id`, `novost_id`, `autor`, `email`, `tekst`, `vrijeme`) VALUES
+(3, 5, 'Autor1', '', 'komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar', '2015-05-27 00:24:29'),
+(7, 2, 'Anonymous', '', 'neki tekst neki tekst neki tekst neki tekst neki tekst neki tekst ', '2015-05-27 00:25:32'),
+(8, 2, 'Nisam s Klixa', '', 'ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ', '2015-05-27 00:26:12'),
+(14, 1, 'Anon', 'a@c', 'prvi komentar', '2015-05-27 17:05:28'),
+(15, 4, 'Edo', 'edo@com', 'ovo je komentar ovo je komentar ovo je komentar ovo je komentar ovo je komentar ovo je komentar ', '2015-05-27 17:37:56'),
+(16, 4, 'klixovac', '', 'ddadadadadadadavav ddadadadadadadavav ddadadadadadadavav', '2015-05-27 17:41:32'),
+(18, 4, 'došo', '', '#komentariso', '2015-05-27 19:12:25'),
+(34, 4, 'samo', '', 'samo da nešto vidim', '2015-05-27 19:10:40');
 
 -- --------------------------------------------------------
 
@@ -94,7 +100,7 @@ ALTER TABLE `novosti`
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `novosti`
 --

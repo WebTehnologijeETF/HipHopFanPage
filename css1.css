@@ -24,7 +24,7 @@ body {
 	min-height: 100%;
 	}
 	*/
-#homepage, #tablepage, #kontaktpage, #linkpage, #downloadpage, #grafitipage, #mixtapepage, #kontaktpagephp, #saljipagephp {
+#homepage, #komentpost, #tablepage, #kontaktpage, #linkpage, #downloadpage, #grafitipage, #mixtapepage, #kontaktpagephp, #saljipagephp {
 	display: inline-block;
 	position: relative;
 	left: 170px;
@@ -172,9 +172,6 @@ body {
 	min-height: 550px;
 	position: relative;
 	float: left;
-	border: solid 2px;
-	border-radius: 20px;
-	border-color: #0F1F2E;
 	top: 60px;
 	margin-bottom: 58px;
 	}
@@ -220,10 +217,20 @@ body {
 	}*/
 .post {
 	position: relative;
-	max-width: 620px;
+	width: 619px;
 	min-height: 300px;
 	clear: both;
-	left: 5px;
+	left: 5px;	
+}
+#pt {
+	position: relative;
+	left: -5px;
+	width: 619px;
+	min-height: 300px;
+	clear: both;
+	border: solid 2px;
+	border-radius: 20px;
+	border-color: #0F1F2E;
 }
 
 .post1 {
@@ -249,6 +256,8 @@ body {
 
 .post a, .post1 a {
 	cursor: pointer;
+	text-decoration: none;
+	color: black;
 }
 .entry-content {
 	position: relative;
@@ -317,22 +326,42 @@ body {
 	margin-bottom: 20px;
 
 }
-
+.komentari h5 {
+	font-family: Ubuntu, Tahoma;
+	color: black;
+	position: relative;
+	left: 24px;
+	top: 1px;
+}
+.komentari h2 {
+	font-family: Ubuntu, Tahoma;
+	position: relative;
+	left: 10px;
+}
+.komentari a {
+	color: black;
+	text-decoration: none;
+}
+.komentari a:hover {
+	color: gray;
+}
 .komentar .entry-content {
 	position: relative;
 	top: 20px;
 	left: 5px;
 	font-style: italic;
 }
-.autorK, .datumK {
+.autorK, .datumK, .emailK {
 	position: relative;
 	left: 10px;
 	font-family: Ubuntu;
 	font-size: 12px;
 	color: #121C2E;
 }
-.unos {
+#unos {
+	font-family: Ubuntu, Tahoma;
 	font-weight: bold;
+	font-size: 17px;
 }
 #formaKomentari {
 	position: relative;
@@ -349,33 +378,62 @@ body {
 	top: -1px;
 	left: 560px;
 }
+
+#nickK, #emailK {
+	width: 14em;
+}
+
+#novost_idK {
+	position: relative;
+	visibility: hidden;
+	width: 14em;
+}
+#nick_label, #emailK_label {
+	font-family: Ubuntu, Tahoma;
+}
+#poruka_uspjesno, #poruka_neuspjesno {
+	position: relative;
+	text-align: center;
+	top: 40px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .desno {
 	position: absolute;
 	left:622px;
-	
-	/*left: 622px;*/
 	float: right;
 	max-width: 328px;
 	min-height: 120px;
 	}
 .recommend {
-	min-height: 75px;
+	position: relative;
+	top: 60px;
 	border: solid 2px;
 	border-radius: 20px;
 	border-color: #0F1F2E;
 	background: #F6FFF6;
 	}
-.recommend>h2 {
+.preporucujemo {
+	width: 325px;
+	height: 58px;
+	border: solid 1px;
+	border-radius: 20px;
+	float: left;
+	position: absolute;
+}
+.preporucujemo>h2 {
 	color: black;
 	text-align: left;
 	text-decoration: none;
-	margin-top: 5px;
-	margin-left: 25px;
+	position: relative;
 	padding: 8px;
+	font-style: italic;
 	}	
 .recommend>h4 {
 	margin: 4px;
-	margin-left: 25px;
+	position: relative;
+	text-align: center;
 	text-decoration: none;
 	}
 .recommend h4 a {
@@ -387,8 +445,8 @@ body {
 }
 .recommend>p {
 	padding: 8px;
-	margin-left: 20px;
-	margin-right: 10px;
+	position: relative;
+	text-align: center;
 	text-decoration: none;
 	}
 .recommend  a {
@@ -397,7 +455,8 @@ body {
 .recommend>img {
 	max-width: 200px;
 	max-height: 200px;
-	margin-left: 25px;
+	position: relative;
+	left: 50px;
 	padding: 8px;
 	}
 .quotes {
@@ -407,6 +466,7 @@ body {
 	background: #F6FFF6;
 	min-height: 60px;
 	position: relative;
+	top: 60px;
 	}
 .quotes img {
 	max-width: 70px;

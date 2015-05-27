@@ -69,9 +69,20 @@
 		</div>
 		
 		<div class="desno">
-			<div class="recommend">
+			
+			<div class="preporucujemo">
 				<h2>Preporučujemo</h2>
-				
+			</div>
+
+			<div class="recommend">
+					<h4 class="title0"><a href="#">Juice - HIPHOPIUM 3</a></h4>
+					<img src="slike/sdju.jpg" alt="Juice">
+					<p>Poslušajte novi album <a href="http://www.deezer.com/album/10343950" target="blank">ovdje</a></p>
+					
+					<h4 class="title3"><a href="#">Smoke Mardeljano - <br> Znaš me, znam te</a></h4>
+					<img src="slike/smoke.png" alt="Smoke">
+					<p>Poslušajte novi album <a href="http://www.deezer.com/playlist/1074252191" target="blank">ovdje</a></p>
+
 					<h4 class="title1"><a href="#">J. Cole - Forest Hills Drive</a></h4>
 					<img src="slike/jcole.jpg" alt="JCole">
 					<p>Poslušajte novi album <a href="https://soundcloud.com/2014-forest-hills-dr" target="blank">ovdje</a></p>

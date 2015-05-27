@@ -2,7 +2,7 @@
  <div class="post"> 
 
     <?php
-     $veza = new PDO("mysql:dbname=projekat;host=localhost;charset=utf8", "Admin", "admin");
+     $veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
      $rezultat = $veza->query("SELECT id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, detaljnije 
                                FROM novosti 
                                ORDER BY vrijeme DESC");
@@ -25,7 +25,7 @@
              if(strlen($detaljnije)==0)
                 $det=" ";
               else
-                $det="<a onclick='dajDetaljnije(".$id.")'> Detaljnije...</a>";
+                $det="<a href = '#' onclick='dajDetaljnije(".$id.")'> Detaljnije...</a>";
 
            
            //$aaa=$veza->query($rezultat);
@@ -59,13 +59,13 @@
         $komentar="Nema komentara";
      }
 
-     print" <img class='photo' src='".htmlspecialchars(trim($slika), ENT_QUOTES, 'UTF-8')."'>
+     print("<div id=pt> <img class='photo' src='".htmlspecialchars(trim($slika), ENT_QUOTES, 'UTF-8')."'>
             <h2 class='full-title'><a>".htmlspecialchars(trim($naslov), ENT_QUOTES, 'UTF-8')."</a></h2>
             <div class='date'>".htmlentities(date("d.m.Y. (h:i)", $datum), ENT_QUOTES)."</div>
             <div class='autor'>".htmlspecialchars(trim($autor), ENT_QUOTES, 'UTF-8')."</div>
             <p class = 'entry-content'>".htmlspecialchars(trim($tekst), ENT_QUOTES, 'UTF-8').$det."</p>
-            <small class = 'komentarLabela'><a onclick='dajKomentar(".$id.")'>".htmlspecialchars(trim($komentar), ENT_QUOTES, 'UTF-8')."</a></small>
-          ";
+            <small class = 'komentarLabela'><a href = '#' onclick='dajKomentar(".$id.")'>".htmlspecialchars(trim($komentar), ENT_QUOTES, 'UTF-8')."</a></small>
+          </div>");
 
     }
 ?>
