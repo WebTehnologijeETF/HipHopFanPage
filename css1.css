@@ -76,11 +76,16 @@ body {
 	height: 28px;
 	cursor: pointer;
 	}
-#menu ul {
+#menu>.meni_ul {
 	list-style-type: none;
 	padding: 0px;
 	margin: 0px;
 	}
+#menu>.login_meni {
+	list-style-type: none;
+	position: relative;
+	left: 230px;
+}
 #menu li {
 	display: inline;
 	}
@@ -218,7 +223,7 @@ body {
 	max-width: 620px;
 	min-height: 300px;
 	clear: both;
-	left: 5px;	
+	left: 5px;
 }
 
 .post1 {
@@ -238,8 +243,11 @@ body {
 	border: solid;
 	border-radius: 12px;
 }
+.post>small>a:hover, .post1>small>a:hover {
+	color: gray;
+}
 
-.post a {
+.post a, .post1 a {
 	cursor: pointer;
 }
 .entry-content {
@@ -250,7 +258,6 @@ body {
 	width: 350px;
 	font-size: 15px;
 	margin-right: 2px;
-
 	}
 .post1> p {
 	position: relative;
@@ -280,7 +287,68 @@ body {
 	top: -90px;
 	left: 5px;
 }
+.post1 small {
+	position: relative;
+	top: 70px;
+}
 
+/*.post .line {
+	border-bottom: solid;
+	position: relative;
+	top: -40px;
+	border-bottom-left-radius: 12px;
+	width: 608px;
+}
+*/
+.komentar {
+	position: relative;
+	left: 20px;
+}
+.komentari {
+	position: relative;
+	left: 45px;
+	top: 10px;
+	width: 650px;
+	min-height: 500px;
+	height: auto;
+	border: solid 2px;
+	border-radius: 12px;
+	padding: 8px;
+	margin-bottom: 20px;
+
+}
+
+.komentar .entry-content {
+	position: relative;
+	top: 20px;
+	left: 5px;
+	font-style: italic;
+}
+.autorK, .datumK {
+	position: relative;
+	left: 10px;
+	font-family: Ubuntu;
+	font-size: 12px;
+	color: #121C2E;
+}
+.unos {
+	font-weight: bold;
+}
+#formaKomentari {
+	position: relative;
+	left: 25px;
+}
+#formaKomentari textarea {
+	float: right;
+	position: relative;
+	top: -171px;
+	left: -30px;
+}
+#formaKomentari #submit {
+	position: relative;
+	top: -1px;
+	left: 560px;
+}
 .desno {
 	position: absolute;
 	left:622px;

@@ -24,7 +24,7 @@
 		</div>
 
 		<div id="menu">
-			<ul>
+			<ul class = "meni_ul">
 				<li><a id="menu1" onclick="openUrl('index.php')">Home</a></li>
 				<li><a id="menu2" href="javascript:void(0);" onclick="subKreiraj('menu2', 'subm2')" onmouseleave="subNestani('subm2')">Tabele</a></li>
 				<li><a id="menu3" href="javascript:void(0);" onclick="subKreiraj('menu3', 'subm3')" onmouseleave="subNestani('subm3')">Download</a></li>
@@ -32,6 +32,10 @@
 				<li><a id="menu5" onclick="openUrl('mixtapes.html')">Mixtapes</a></li>
 				<li><a id="menu6" onclick="openUrl('linkovi.html')">Linkovi</a></li>
 				<li><a id="menu7" onclick="openUrl('kontakt.html')">Kontakt</a></li>
+			</ul>
+			<ul class="login_meni">
+				<li><a id="menu8" href="#">Log in</a></li>
+				<li><a id="menu9" href="#">Sign up</a></li>
 			</ul>
 		</div>
 	</header>

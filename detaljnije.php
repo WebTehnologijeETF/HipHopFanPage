@@ -24,17 +24,46 @@ $rezultat = $veza->query("SELECT naslov, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor
              $tekst=$novosti['tekst'];
              $detaljnije=$novosti['detaljnije'];
              $slika=$novosti['slika'];
-             $id=$novosti['id'];
+
+             $komentari = $veza->query("SELECT COUNT(novost_id) 
+                               FROM komentar 
+                               WHERE novost_id =".$id);
+   			 $broj = $komentari->fetchColumn();
+
+   			 if($broj==1) {
+          		$komentar=$broj. " komentar";
+          	 }
+
+	     	 elseif($broj>1) {
+	       	    $komentar=$broj. " komentara";
+	     	 }
+
+	     	 else {
+	     	    $komentar="Nema komentara";
+	     	 }
          }
          print "<img class = 'slika' src ='".htmlentities($slika, ENT_QUOTES)."'>
          		<h2>".htmlspecialchars($naslov, ENT_QUOTES, 'UTF-8')."</h2>
          		<div class='date1'>".htmlentities(date("d.m.Y. (h:i)", $datum), ENT_QUOTES)."</div>
             	<div class = 'autor1'> ".htmlspecialchars($autor, ENT_QUOTES, 'UTF-8')."</div>
           		<p class 'entry-content1'>".htmlspecialchars($detaljnije, ENT_QUOTES, 'UTF-8')."</p>
-           
+          	    <small class = 'komentar1'><a onclick='dajKomentarD(".$id.")'>".htmlspecialchars(trim($komentar), ENT_QUOTES, 'UTF-8')."</a></small>
+        		 	  
+		       ";
 
-         ";
 
 ?>
 
+</div>
+<div class="komentari">
+<h2>Komentari</h2>
+	<?php if($broj==0) {
+		echo "</br>Nema komentara na ovu vijest.<br><br><br>";
+		include 'komentari.php';
+	}
+		else {
+			echo "</br></br>";
+	include 'komentari.php'; 
+}
+?>
 </div>

@@ -1,9 +1,11 @@
- <link rel="stylesheet" type="text/css1.css" href="">
+<link rel="stylesheet" type="text/css" href="css1.css">
  <div class="post"> 
 
     <?php
      $veza = new PDO("mysql:dbname=projekat;host=localhost;charset=utf8", "Admin", "admin");
-     $rezultat = $veza->query("select id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, detaljnije from novosti order by vrijeme desc");
+     $rezultat = $veza->query("SELECT id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, detaljnije 
+                               FROM novosti 
+                               ORDER BY vrijeme DESC");
      //$rezultat=$veza->query("select * from novosti order by vrijeme desc");
      if (!$rezultat) {
           $greska = $veza->errorInfo();
@@ -40,7 +42,11 @@
                                FROM komentar 
                                WHERE novost_id =".$novosti['id']);
     $broj = $komentari->fetchColumn();
-
+/*
+    foreach ($komentari as $komnt) {
+      $novost_id=$komnt['novost_id'];
+    }
+*/
      if($broj==1) {
           $komentar=$broj. " komentar";
       }
@@ -58,7 +64,7 @@
             <div class='date'>".htmlentities(date("d.m.Y. (h:i)", $datum), ENT_QUOTES)."</div>
             <div class='autor'>".htmlspecialchars(trim($autor), ENT_QUOTES, 'UTF-8')."</div>
             <p class = 'entry-content'>".htmlspecialchars(trim($tekst), ENT_QUOTES, 'UTF-8').$det."</p>
-            <small class = 'komentar'>".htmlspecialchars(trim($komentar), ENT_QUOTES, 'UTF-8')."</small>
+            <small class = 'komentarLabela'><a onclick='dajKomentar(".$id.")'>".htmlspecialchars(trim($komentar), ENT_QUOTES, 'UTF-8')."</a></small>
           ";
 
     }

@@ -31,3 +31,20 @@ function dajDetaljnije(id) {
     xmlhttp.open("GET", "detaljnije.php?id="+id, true);
     xmlhttp.send();
 }
+
+function dajKomentar(id) {
+   //alert("pozvo");
+    var xmlhttp=new XMLHttpRequest();
+     xmlhttp.onreadystatechange=function(){
+        if(xmlhttp.status === 200 & xmlhttp.readyState === 4) {
+           
+            document.getElementById("homepage").innerHTML = xmlhttp.responseText;   
+        }
+      else if(xmlhttp.readyState==4 && xmlhttp.status==404) {
+
+            alert("404 error page!");
+        }
+    }
+    xmlhttp.open("GET", "komentari.php?id="+id, true);
+    xmlhttp.send();
+}
