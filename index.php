@@ -96,29 +96,31 @@
 			<div class="quotes">
 				
 				<h2>Quotes</h2>
-				<img src="slike/photo.jpg" alt="photo">
-				<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-				<h5 class="Qa">autor</h5>
-
-
-				<img src="slike/photo.jpg" alt="photo">
-				<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-				<h5 class="Qa">autor</h5>
-
-				
-				<img src="slike/photo.jpg" alt="photo">
-				<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-				<h5 class="Qa">autor</h5>
-
-				
-				<img src="slike/photo.jpg" alt="photo">
-				<p>"blablablalbalblalblalblalbalblabla <br>lblalaalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-				<h5 class="Qa">autor</h5>
-
-				<img src="slike/photo.jpg" alt="photo">
-				<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-				<h5 class="Qa">autor</h5>
-
+				<div class="quote">
+					<img src="slike/tkweli.jpg" alt="photo">
+					<p>"You'll try to change the world <br> So please excuse me while I laugh..."</p>
+					<h5 class="Qa">Talib Kweli</h5>
+				</div>
+				<div class="quote">
+					<img src="slike/IT.jpg" alt="photo">
+					<p>"And I refuse to be concerned with condescending advice, 'cause I'm the only motherfucka that can change my life."</p>
+					<h5 class="Qa">Immortal Technique</h5>
+				</div>
+				<div class="quote">
+					<img src="slike/common.png" alt="photo">
+					<p>"Never looking back or too far in front of me, the present is a gift, and I just want to Be!"</p>
+					<h5 class="Qa">Common</h5>
+				</div>
+				<div class="quote">
+					<img src="slike/photo.jpg" alt="photo">
+					<p>"blablablalbalblalblalblalbalblabla <br>lblalaalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
+					<h5 class="Qa">autor</h5>
+				</div>
+				<div class="quote">
+					<img src="slike/photo.jpg" alt="photo">
+					<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
+					<h5 class="Qa">autor</h5>
+				</div>
 			</div>
 		
 		</div> 
