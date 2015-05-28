@@ -75,8 +75,14 @@
 			</div>
 
 			<div class="recommend">
+					<h4 class="title4"><a href="#">Jedi Mind Tricks - <br>Fraudulent Cloth ft. Eamon</a></h4>
+					<iframe width="310" height="205"	
+						src="https://www.youtube.com/embed/xnXtY5_djjI">
+					</iframe class="JMT">
+					<p>From the new Jedi Mind Tricks "The Thief and the Fallen" album available everywhere June 2nd</p>
+					
 					<h4 class="title0"><a href="#">Juice - HIPHOPIUM 3</a></h4>
-					<img src="slike/sdju.jpg" alt="Juice">
+					<img src="slike/sdju.png" alt="Juice">
 					<p>Poslušajte novi album <a href="http://www.deezer.com/album/10343950" target="blank">ovdje</a></p>
 					
 					<h4 class="title3"><a href="#">Smoke Mardeljano - <br> Znaš me, znam te</a></h4>
@@ -97,12 +103,12 @@
 				
 				<h2>Quotes</h2>
 				<div class="quote">
-					<img src="slike/tkweli.jpg" alt="photo">
+					<img src="slike/tkweli.png" alt="photo">
 					<p>"You'll try to change the world <br> So please excuse me while I laugh..."</p>
 					<h5 class="Qa">Talib Kweli</h5>
 				</div>
 				<div class="quote">
-					<img src="slike/IT.jpg" alt="photo">
+					<img src="slike/IT.png" alt="photo">
 					<p>"And I refuse to be concerned with condescending advice, 'cause I'm the only motherfucka that can change my life."</p>
 					<h5 class="Qa">Immortal Technique</h5>
 				</div>
@@ -112,13 +118,18 @@
 					<h5 class="Qa">Common</h5>
 				</div>
 				<div class="quote">
-					<img src="slike/photo.jpg" alt="photo">
-					<p>"blablablalbalblalblalblalbalblabla <br>lblalaalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
-					<h5 class="Qa">autor</h5>
+					<img src="slike/eminem.png" alt="photo">
+					<p>"No matter where you run, I'll be right there, right behind you, in your nightmares..."</p>
+					<h5 class="Qa">Eminem</h5>
 				</div>
 				<div class="quote">
-					<img src="slike/photo.jpg" alt="photo">
-					<p>"blablablalbalblalblalblalbalblabla <br>lblalalblalblablablalbalblablalbl<br>ablalbablalbal"</p>
+					<img src="slike/lowkey1.png" alt="photo">
+					<p>"This album has been in the making a quarter century, born to bless the beat and rap over recorded melody, I knew the truth since I was a small little boy I am a product of the system I was born to destroy"</p>
+					<h5 class="Qa">Lowkey</h5>
+				</div>
+				<div class="quote">
+					<img src="slike/pac.png" alt="photo">
+					<p>"Reality is wrong. Dreams are for real."</p>
 					<h5 class="Qa">autor</h5>
 				</div>
 			</div>

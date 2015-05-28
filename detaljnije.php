@@ -7,15 +7,18 @@ $id= $_REQUEST['id'];
 
 //echo $id;
 $veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
-$rezultat = $veza->query("SELECT naslov, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, tekst, detaljnije 
-					      FROM novosti 
-						  WHERE id=".$id);
+$rezultat = $veza->prepare("SELECT naslov, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, tekst, detaljnije 
+				  	        FROM novosti 
+						    WHERE id=:id");
+$rezultat->bindParam(':id', $id);
      //$rezultat=$veza->query("select * from novosti order by vrijeme desc");
-     if (!$rezultat) {
+     if (!$rezultat->execute()) {
           $greska = $veza->errorInfo();
           print "SQL greška: " . $greska[2];
           exit();
      }
+
+
 
     foreach ($rezultat as $novosti) {
              $naslov=$novosti['naslov'];
@@ -25,10 +28,19 @@ $rezultat = $veza->query("SELECT naslov, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor
              $detaljnije=$novosti['detaljnije'];
              $slika=$novosti['slika'];
 
-             $komentari = $veza->query("SELECT COUNT(novost_id) 
-                               FROM komentar 
-                               WHERE novost_id =".$id);
-   			 $broj = $komentari->fetchColumn();
+             $komentari = $veza->prepare("SELECT COUNT(novost_id) 
+                                          FROM komentar 
+                            		      WHERE novost_id =:id");
+
+             $komentari->bindParam(':id', $id);
+
+             if(!$komentari->execute()) {
+		          $greska = $veza->errorInfo();
+		          print "SQL greška: " . $greska[2];
+		          exit();
+		     }
+			
+			 $broj = $komentari->fetchColumn();
 
    			 if($broj==1) {
           		$komentar=$broj. " komentar";

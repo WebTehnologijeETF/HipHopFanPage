@@ -9,11 +9,14 @@ $id=$_REQUEST['id'];
 
 
 $veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
-$komentari = $veza->query("SELECT autor, tekst, UNIX_TIMESTAMP(vrijeme) datum, email
-						   FROM komentar
-						   WHERE novost_id =".$id."
-						   ORDER BY datum asc");
- if (!$komentari) {
+$komentari = $veza->prepare("SELECT autor, tekst, UNIX_TIMESTAMP(vrijeme) datum, email
+						     FROM komentar
+						     WHERE novost_id =:id
+						     ORDER BY datum asc");
+
+$komentari->bindParam(':id', $id);
+
+ if (!$komentari->execute()) {
           $greska = $veza->errorInfo();
           print "SQL greška: " . $greska[2];
           exit();

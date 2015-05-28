@@ -69,7 +69,7 @@
 	$veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
 
 	$send=$veza->prepare("INSERT INTO komentar (novost_id, autor, email, tekst)
-					    VALUES (:n_id,:nick,:email,:tekst)");
+					      VALUES (:n_id,:nick,:email,:tekst)");
 	$send->bindParam(':n_id', $n_id);
 	$send->bindParam(':nick', $nick);
 	$send->bindParam(':email', $email);
