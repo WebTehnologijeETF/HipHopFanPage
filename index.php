@@ -89,14 +89,15 @@
 					<img src="slike/smoke.png" alt="Smoke">
 					<p>Poslušajte novi album <a href="http://www.deezer.com/playlist/1074252191" target="blank">ovdje</a></p>
 
+				<!--
 					<h4 class="title1"><a href="#">J. Cole - Forest Hills Drive</a></h4>
 					<img src="slike/jcole.jpg" alt="JCole">
 					<p>Poslušajte novi album <a href="https://soundcloud.com/2014-forest-hills-dr" target="blank">ovdje</a></p>
 				
-				
-					<h4 class="title2"><a href="#">Kendi - Van Dometa</a></h4>
+									<h4 class="title2"><a href="#">Kendi - Van Dometa</a></h4>
 					<img src="slike/kendi.jpg" alt="Kendi">
 					<p>Prvi Kendijev album možete download-ovati <a href="http://www.hulkshare.com/bassivity/kendi-van-dometa-www-bassivitydigital-com" target="blank">ovdje</a></p>			
+			-->
 			</div>
 		
 			<div class="quotes">
