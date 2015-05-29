@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.11.87.130:3306
--- Generation Time: May 28, 2015 at 04:59 PM
+-- Generation Time: May 28, 2015 at 11:25 PM
 -- Server version: 5.5.41
 -- PHP Version: 5.3.3
 
@@ -45,28 +45,17 @@ INSERT INTO `komentar` (`id`, `novost_id`, `autor`, `email`, `tekst`, `vrijeme`)
 (3, 5, 'Autor1', '', 'komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar komentar', '2015-05-27 00:24:29'),
 (7, 2, 'Anonymous', '', 'neki tekst neki tekst neki tekst neki tekst neki tekst neki tekst ', '2015-05-27 00:25:32'),
 (8, 2, 'Nisam s Klixa', '', 'ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ujeujeujeujeujeeuje ', '2015-05-27 00:26:12'),
-(15, 4, 'Edo', 'edo@com', 'ovo je komentar ovo je komentar ovo je komentar ovo je komentar ovo je komentar ovo je komentar ', '2015-05-27 17:37:56'),
+(15, 4, 'jeste', 'jeste@com', 'ovo je komentar ovo je komentar ovo je komentar ovo je komentar ovo je komentar ovo je komentar ', '2015-05-28 23:14:28'),
 (18, 4, 'došo', '', '#komentariso', '2015-05-27 19:12:25'),
 (34, 4, 'samo', '', 'samo da nešto vidim', '2015-05-27 19:10:40'),
 (35, 5, 'Lejla', 'lejla.a36@gmail.com', '#aaaajmooooooo', '2015-05-27 21:11:42'),
 (36, 6, 'Hipster', 'hipster@indierock.com', 'Sluašo sam ove prije nego što su bili popularni', '2015-05-27 21:12:49'),
-(37, 5, 'MalaOdSkandala', '', 'DIVERGENT', '2015-05-27 21:17:39'),
 (38, 6, 'Brbiša', 'lud@za.tobom', 'Slušao*', '2015-05-27 21:38:52'),
 (40, 6, 'Lepi', 'iza_oblaka@bih.net.ba', 'E ti čija si noćas čija', '2015-05-27 21:52:28'),
-(41, 5, 'Ramiz', '', 'Drva prodajem bukova. Metar 30 KM. Kući ne dolazite, na vašaru sam vazdan, nazovite šćeru na telefon. 061963125', '2015-05-27 21:53:55'),
-(42, 5, 'Emir', '', 'Čekam te u Barseloni buco #vatuka #zagreb-barsa-sarajevo ', '2015-05-27 21:59:54'),
 (43, 2, 'Jesam s klixa', '', 'Klix maaaaaajka', '2015-05-27 22:00:36'),
 (46, 5, 'DosoNako', '', 'Ne bih reko da su ti ovi datumi ok, trebala bi timestamp_current uzet il tako nesto', '2015-05-27 22:04:12'),
 (47, 5, 'DosoNako', '', 'Uranili tipa dva sata', '2015-05-27 22:04:36'),
-(48, 5, 'DosoNako', '', 'A i svakako trebaju bit sortirani drugacije', '2015-05-27 22:06:00'),
-(49, 5, 'Đađo', '', 'ne slušaj dušmane hoće da te u crno zaviju', '2015-05-27 22:08:05'),
-(50, 5, 'DosoNako', '', 'ne đađaj đađeru jedan', '2015-05-27 22:09:07'),
-(51, 5, 'Đađo', '', 'fino je rećeno ako imaš samo pouzdanja u sebe i drugi će te volijeti sa 10 svojih prstiju', '2015-05-27 22:11:01'),
-(52, 5, 'Lekica', '', 'Volim eurokrema na kašiku više nego išta', '2015-05-27 22:20:08'),
-(53, 5, 'Stoja', '', 'Daj Šuki, mosa daji', '2015-05-27 22:27:31'),
-(54, 5, 'Končo', '', 'Komercijala sam, priznam', '2015-05-27 22:28:03'),
-(56, 5, 'pusica', '', ':PP', '2015-05-28 11:32:40'),
-(57, 1, '#nijevato', '', '<script>alert(''<3'')</script>', '2015-05-28 16:57:53');
+(48, 5, 'DosoNako', '', 'A i svakako trebaju bit sortirani drugacije', '2015-05-27 22:06:00');
 
 -- --------------------------------------------------------
 

@@ -2,7 +2,7 @@
  <div class="post"> 
 
     <?php
-     $veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
+     $veza = new PDO("mysql:dbname=hiphoppage;host=127.11.87.130;charset=utf8", "Admin1", "admin");
      $rezultat = $veza->query("SELECT id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, detaljnije 
                                FROM novosti 
                                ORDER BY vrijeme DESC");
@@ -38,9 +38,17 @@
 //<img src =".htmlentities($slika, ENT_QUOTES)." alt = 'slika'>
           // $slika='<img src="prikaziSliku.php?id=1">';
      
-    $komentari = $veza->query("SELECT COUNT(novost_id) 
-                               FROM komentar 
-                               WHERE novost_id =".$novosti['id']);
+    $komentari = $veza->prepare("SELECT COUNT(novost_id) 
+                                 FROM komentar 
+                                 WHERE novost_id =:id");
+
+    $komentari->bindParam(':id', $id);
+    
+    if (!$komentari->execute()) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
     $broj = $komentari->fetchColumn();
 /*
     foreach ($komentari as $komnt) {

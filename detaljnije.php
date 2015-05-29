@@ -6,7 +6,7 @@
 $id= $_REQUEST['id'];
 
 //echo $id;
-$veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
+$veza = new PDO("mysql:dbname=hiphoppage;host=127.11.87.130;charset=utf8", "Admin1", "admin");
 $rezultat = $veza->prepare("SELECT naslov, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, tekst, detaljnije 
 				  	        FROM novosti 
 						    WHERE id=:id");

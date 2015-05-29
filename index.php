@@ -90,7 +90,7 @@
 					<p>Poslušajte novi album <a href="http://www.deezer.com/playlist/1074252191" target="blank">ovdje</a></p>
 
 				<!--
-					<h4 class="title1"><a href="#">J. Cole - Forest Hills Drive</a></h4>
+				<h4 class="title1"><a href="#">J. Cole - Forest Hills Drive</a></h4>
 					<img src="slike/jcole.jpg" alt="JCole">
 					<p>Poslušajte novi album <a href="https://soundcloud.com/2014-forest-hills-dr" target="blank">ovdje</a></p>
 				

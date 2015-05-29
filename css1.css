@@ -400,9 +400,8 @@ body {
 }
 
 .desno {
-	position: absolute;
-	left:622px;
-	float: right;
+	display: inline-block;
+	position: relative;
 	width: 328px;
 	min-height: 120px;
 	}
