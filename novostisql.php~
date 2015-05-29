@@ -2,7 +2,7 @@
  <div class="post"> 
 
     <?php
-     $veza = new PDO("mysql:dbname=hiphoppage;host=localhost;charset=utf8", "Admin1", "admin");
+     $veza = new PDO("mysql:dbname=hiphoppage;host=127.11.87.130;charset=utf8", "Admin1", "admin");
      $rezultat = $veza->query("SELECT id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, detaljnije 
                                FROM novosti 
                                ORDER BY vrijeme DESC");
